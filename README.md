@@ -28,11 +28,11 @@ To override this (or any other) theme in your personal config file, please follo
 
 ## Contribute
 
-1. Clone and open this [repo](https://github.com/pierredotco/pierre-vscode-theme) in VS Code
+1. Clone and open this [repo](https://github.com/pierrecomputer/pierre-vscode-theme) in VS Code
 2. Run `yarn` to install the dependencies.
 3. Press `F5` to open a new window with your extension loaded
 4. Open `Code > Preferences > Color Theme` [`⌘k ⌘t`] and pick the "Pierre…" theme you want to test.
-5. Make changes to the [`/src/theme.ts`](https://github.com/pierredotco/pierre-vscode-theme/blob/main/src/theme.ts) file.
+5. Make changes to the [`/src/theme.ts`](https://github.com/pierrecomputer/pierre-vscode-theme/blob/main/src/theme.ts) file.
 6. Run `npm run build` to update the theme. You can also run `npm run start` instead to automatically rebuild the theme while making changes and no reloading should be necessary.
 7. Run `npm test` to validate your changes (this runs automatically on PRs).
 8. Once you're happy, commit your changes and open a PR.

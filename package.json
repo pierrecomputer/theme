@@ -2,7 +2,7 @@
   "name": "pierre-vscode-theme",
   "displayName": "Pierre Theme",
   "description": "Pierre theme for Shiki, VS Code, and more",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "publisher": "pierre-computer-co",
   "icon": "icon.png",
   "galleryBanner": {
@@ -12,10 +12,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pierredotco/pierre-vscode-theme"
+    "url": "https://github.com/pierrecomputer/pierre-vscode-theme"
   },
   "bugs": {
-    "url": "https://github.com/pierredotco/vscode-theme/issues"
+    "url": "https://github.com/pierrecomputer/pierre-vscode-theme/issues"
   },
   "engines": {
     "vscode": "^1.0.0"
@@ -40,16 +40,6 @@
         "label": "Pierre Dark",
         "uiTheme": "vs-dark",
         "path": "./themes/pierre-dark.json"
-      },
-      {
-        "label": "Pierre Light Vibrant",
-        "uiTheme": "vs",
-        "path": "./themes/pierre-light-vibrant.json"
-      },
-      {
-        "label": "Pierre Dark Vibrant",
-        "uiTheme": "vs-dark",
-        "path": "./themes/pierre-dark-vibrant.json"
       }
     ]
   },
@@ -60,9 +50,9 @@
     "package": "vsce package"
   },
   "devDependencies": {
-    "nodemon": "^3.1.7",
+    "nodemon": "^3.1.11",
     "ts-node": "^10.9.2",
-    "typescript": "^5.6.3",
+    "typescript": "^5.9.3",
     "vsce": "^2.15.0"
   },
   "publishConfig": {
