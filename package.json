@@ -47,7 +47,7 @@
     "build": "ts-node src/build.ts",
     "test": "npm run build && ts-node src/test.ts",
     "start": "nodemon --watch src --ext ts --exec npm run build",
-    "package": "vsce package"
+    "package": "ts-node src/package-vsix.ts"
   },
   "devDependencies": {
     "nodemon": "^3.1.11",
