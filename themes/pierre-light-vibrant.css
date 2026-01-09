@@ -1,0 +1,298 @@
+/* Pierre Light Vibrant - Generated theme CSS with Display P3 fallbacks */
+
+:root {
+  --vscode-editor-background: #ffffff; /* sRGB fallback */
+  --vscode-editor-background: color(display-p3 1.000000 1.000000 1.000000); /* Display P3 */
+  --vscode-editor-foreground: #070707; /* sRGB fallback */
+  --vscode-editor-foreground: color(display-p3 0.027451 0.027451 0.027451); /* Display P3 */
+  --vscode-foreground: #070707; /* sRGB fallback */
+  --vscode-foreground: color(display-p3 0.027451 0.027451 0.027451); /* Display P3 */
+  --vscode-focusBorder: #008cff; /* sRGB fallback */
+  --vscode-focusBorder: color(display-p3 0.267653 0.570512 1.000000); /* Display P3 */
+  --vscode-selection-background: #dfe7ff; /* sRGB fallback */
+  --vscode-selection-background: color(display-p3 0.880188 0.904864 0.991592); /* Display P3 */
+  --vscode-editor-selectionBackground: #008cff2e; /* sRGB fallback */
+  --vscode-editor-selectionBackground: color(display-p3 0.267653 0.570512 1.000000 / 0.180000); /* Display P3 */
+  --vscode-editor-lineHighlightBackground: #dfe7ff8c; /* sRGB fallback */
+  --vscode-editor-lineHighlightBackground: color(display-p3 0.880188 0.904864 0.991592 / 0.550000); /* Display P3 */
+  --vscode-editorCursor-foreground: #008cff; /* sRGB fallback */
+  --vscode-editorCursor-foreground: color(display-p3 0.267653 0.570512 1.000000); /* Display P3 */
+  --vscode-editorLineNumber-foreground: #84848A; /* sRGB fallback */
+  --vscode-editorLineNumber-foreground: color(display-p3 0.517647 0.517647 0.539124); /* Display P3 */
+  --vscode-editorLineNumber-activeForeground: #6C6C71; /* sRGB fallback */
+  --vscode-editorLineNumber-activeForeground: color(display-p3 0.423529 0.423529 0.441427); /* Display P3 */
+  --vscode-editorIndentGuide-background: #eeeeef; /* sRGB fallback */
+  --vscode-editorIndentGuide-background: color(display-p3 0.933333 0.933333 0.936905); /* Display P3 */
+  --vscode-editorIndentGuide-activeBackground: #dbdbdd; /* sRGB fallback */
+  --vscode-editorIndentGuide-activeBackground: color(display-p3 0.858824 0.858824 0.865969); /* Display P3 */
+  --vscode-diffEditor-insertedTextBackground: #00cab133; /* sRGB fallback */
+  --vscode-diffEditor-insertedTextBackground: color(display-p3 0.309962 0.827620 0.725102 / 0.200000); /* Display P3 */
+  --vscode-diffEditor-deletedTextBackground: #ff2e3f33; /* sRGB fallback */
+  --vscode-diffEditor-deletedTextBackground: color(display-p3 1.000000 0.250216 0.262337 / 0.200000); /* Display P3 */
+  --vscode-sideBar-background: #f8f8f8; /* sRGB fallback */
+  --vscode-sideBar-background: color(display-p3 0.972549 0.972549 0.972549); /* Display P3 */
+  --vscode-sideBar-foreground: #6C6C71; /* sRGB fallback */
+  --vscode-sideBar-foreground: color(display-p3 0.423529 0.423529 0.441427); /* Display P3 */
+  --vscode-sideBar-border: #eeeeef; /* sRGB fallback */
+  --vscode-sideBar-border: color(display-p3 0.933333 0.933333 0.936905); /* Display P3 */
+  --vscode-sideBarTitle-foreground: #070707; /* sRGB fallback */
+  --vscode-sideBarTitle-foreground: color(display-p3 0.027451 0.027451 0.027451); /* Display P3 */
+  --vscode-sideBarSectionHeader-background: #f8f8f8; /* sRGB fallback */
+  --vscode-sideBarSectionHeader-background: color(display-p3 0.972549 0.972549 0.972549); /* Display P3 */
+  --vscode-sideBarSectionHeader-foreground: #6C6C71; /* sRGB fallback */
+  --vscode-sideBarSectionHeader-foreground: color(display-p3 0.423529 0.423529 0.441427); /* Display P3 */
+  --vscode-sideBarSectionHeader-border: #eeeeef; /* sRGB fallback */
+  --vscode-sideBarSectionHeader-border: color(display-p3 0.933333 0.933333 0.936905); /* Display P3 */
+  --vscode-activityBar-background: #f8f8f8; /* sRGB fallback */
+  --vscode-activityBar-background: color(display-p3 0.972549 0.972549 0.972549); /* Display P3 */
+  --vscode-activityBar-foreground: #070707; /* sRGB fallback */
+  --vscode-activityBar-foreground: color(display-p3 0.027451 0.027451 0.027451); /* Display P3 */
+  --vscode-activityBar-border: #eeeeef; /* sRGB fallback */
+  --vscode-activityBar-border: color(display-p3 0.933333 0.933333 0.936905); /* Display P3 */
+  --vscode-activityBar-activeBorder: #008cff; /* sRGB fallback */
+  --vscode-activityBar-activeBorder: color(display-p3 0.267653 0.570512 1.000000); /* Display P3 */
+  --vscode-activityBarBadge-background: #008cff; /* sRGB fallback */
+  --vscode-activityBarBadge-background: color(display-p3 0.267653 0.570512 1.000000); /* Display P3 */
+  --vscode-activityBarBadge-foreground: #ffffff; /* sRGB fallback */
+  --vscode-activityBarBadge-foreground: color(display-p3 1.000000 1.000000 1.000000); /* Display P3 */
+  --vscode-titleBar-activeBackground: #f8f8f8; /* sRGB fallback */
+  --vscode-titleBar-activeBackground: color(display-p3 0.972549 0.972549 0.972549); /* Display P3 */
+  --vscode-titleBar-activeForeground: #070707; /* sRGB fallback */
+  --vscode-titleBar-activeForeground: color(display-p3 0.027451 0.027451 0.027451); /* Display P3 */
+  --vscode-titleBar-inactiveBackground: #f8f8f8; /* sRGB fallback */
+  --vscode-titleBar-inactiveBackground: color(display-p3 0.972549 0.972549 0.972549); /* Display P3 */
+  --vscode-titleBar-inactiveForeground: #84848A; /* sRGB fallback */
+  --vscode-titleBar-inactiveForeground: color(display-p3 0.517647 0.517647 0.539124); /* Display P3 */
+  --vscode-titleBar-border: #eeeeef; /* sRGB fallback */
+  --vscode-titleBar-border: color(display-p3 0.933333 0.933333 0.936905); /* Display P3 */
+  --vscode-list-activeSelectionBackground: #dfe7ffcc; /* sRGB fallback */
+  --vscode-list-activeSelectionBackground: color(display-p3 0.880188 0.904864 0.991592 / 0.800000); /* Display P3 */
+  --vscode-list-activeSelectionForeground: #070707; /* sRGB fallback */
+  --vscode-list-activeSelectionForeground: color(display-p3 0.027451 0.027451 0.027451); /* Display P3 */
+  --vscode-list-inactiveSelectionBackground: #dfe7ff73; /* sRGB fallback */
+  --vscode-list-inactiveSelectionBackground: color(display-p3 0.880188 0.904864 0.991592 / 0.450000); /* Display P3 */
+  --vscode-list-hoverBackground: #dfe7ff59; /* sRGB fallback */
+  --vscode-list-hoverBackground: color(display-p3 0.880188 0.904864 0.991592 / 0.350000); /* Display P3 */
+  --vscode-list-focusOutline: #008cff; /* sRGB fallback */
+  --vscode-list-focusOutline: color(display-p3 0.267653 0.570512 1.000000); /* Display P3 */
+  --vscode-tab-activeBackground: #ffffff; /* sRGB fallback */
+  --vscode-tab-activeBackground: color(display-p3 1.000000 1.000000 1.000000); /* Display P3 */
+  --vscode-tab-activeForeground: #070707; /* sRGB fallback */
+  --vscode-tab-activeForeground: color(display-p3 0.027451 0.027451 0.027451); /* Display P3 */
+  --vscode-tab-activeBorderTop: #008cff; /* sRGB fallback */
+  --vscode-tab-activeBorderTop: color(display-p3 0.267653 0.570512 1.000000); /* Display P3 */
+  --vscode-tab-inactiveBackground: #f8f8f8; /* sRGB fallback */
+  --vscode-tab-inactiveBackground: color(display-p3 0.972549 0.972549 0.972549); /* Display P3 */
+  --vscode-tab-inactiveForeground: #84848A; /* sRGB fallback */
+  --vscode-tab-inactiveForeground: color(display-p3 0.517647 0.517647 0.539124); /* Display P3 */
+  --vscode-tab-border: #eeeeef; /* sRGB fallback */
+  --vscode-tab-border: color(display-p3 0.933333 0.933333 0.936905); /* Display P3 */
+  --vscode-editorGroupHeader-tabsBackground: #f8f8f8; /* sRGB fallback */
+  --vscode-editorGroupHeader-tabsBackground: color(display-p3 0.972549 0.972549 0.972549); /* Display P3 */
+  --vscode-editorGroupHeader-tabsBorder: #eeeeef; /* sRGB fallback */
+  --vscode-editorGroupHeader-tabsBorder: color(display-p3 0.933333 0.933333 0.936905); /* Display P3 */
+  --vscode-panel-background: #f8f8f8; /* sRGB fallback */
+  --vscode-panel-background: color(display-p3 0.972549 0.972549 0.972549); /* Display P3 */
+  --vscode-panel-border: #eeeeef; /* sRGB fallback */
+  --vscode-panel-border: color(display-p3 0.933333 0.933333 0.936905); /* Display P3 */
+  --vscode-panelTitle-activeBorder: #008cff; /* sRGB fallback */
+  --vscode-panelTitle-activeBorder: color(display-p3 0.267653 0.570512 1.000000); /* Display P3 */
+  --vscode-panelTitle-activeForeground: #070707; /* sRGB fallback */
+  --vscode-panelTitle-activeForeground: color(display-p3 0.027451 0.027451 0.027451); /* Display P3 */
+  --vscode-panelTitle-inactiveForeground: #84848A; /* sRGB fallback */
+  --vscode-panelTitle-inactiveForeground: color(display-p3 0.517647 0.517647 0.539124); /* Display P3 */
+  --vscode-statusBar-background: #f8f8f8; /* sRGB fallback */
+  --vscode-statusBar-background: color(display-p3 0.972549 0.972549 0.972549); /* Display P3 */
+  --vscode-statusBar-foreground: #6C6C71; /* sRGB fallback */
+  --vscode-statusBar-foreground: color(display-p3 0.423529 0.423529 0.441427); /* Display P3 */
+  --vscode-statusBar-border: #eeeeef; /* sRGB fallback */
+  --vscode-statusBar-border: color(display-p3 0.933333 0.933333 0.936905); /* Display P3 */
+  --vscode-statusBar-noFolderBackground: #f8f8f8; /* sRGB fallback */
+  --vscode-statusBar-noFolderBackground: color(display-p3 0.972549 0.972549 0.972549); /* Display P3 */
+  --vscode-statusBar-debuggingBackground: #ffca00; /* sRGB fallback */
+  --vscode-statusBar-debuggingBackground: color(display-p3 1.000000 0.832068 0.300621); /* Display P3 */
+  --vscode-statusBar-debuggingForeground: #ffffff; /* sRGB fallback */
+  --vscode-statusBar-debuggingForeground: color(display-p3 1.000000 1.000000 1.000000); /* Display P3 */
+  --vscode-statusBarItem-remoteBackground: #f8f8f8; /* sRGB fallback */
+  --vscode-statusBarItem-remoteBackground: color(display-p3 0.972549 0.972549 0.972549); /* Display P3 */
+  --vscode-statusBarItem-remoteForeground: #6C6C71; /* sRGB fallback */
+  --vscode-statusBarItem-remoteForeground: color(display-p3 0.423529 0.423529 0.441427); /* Display P3 */
+  --vscode-input-background: #f2f2f3; /* sRGB fallback */
+  --vscode-input-background: color(display-p3 0.949020 0.949020 0.952591); /* Display P3 */
+  --vscode-input-border: #dbdbdd; /* sRGB fallback */
+  --vscode-input-border: color(display-p3 0.858824 0.858824 0.865969); /* Display P3 */
+  --vscode-input-foreground: #070707; /* sRGB fallback */
+  --vscode-input-foreground: color(display-p3 0.027451 0.027451 0.027451); /* Display P3 */
+  --vscode-input-placeholderForeground: #8E8E95; /* sRGB fallback */
+  --vscode-input-placeholderForeground: color(display-p3 0.556863 0.556863 0.581925); /* Display P3 */
+  --vscode-dropdown-background: #f2f2f3; /* sRGB fallback */
+  --vscode-dropdown-background: color(display-p3 0.949020 0.949020 0.952591); /* Display P3 */
+  --vscode-dropdown-border: #dbdbdd; /* sRGB fallback */
+  --vscode-dropdown-border: color(display-p3 0.858824 0.858824 0.865969); /* Display P3 */
+  --vscode-dropdown-foreground: #070707; /* sRGB fallback */
+  --vscode-dropdown-foreground: color(display-p3 0.027451 0.027451 0.027451); /* Display P3 */
+  --vscode-button-background: #008cff; /* sRGB fallback */
+  --vscode-button-background: color(display-p3 0.267653 0.570512 1.000000); /* Display P3 */
+  --vscode-button-foreground: #ffffff; /* sRGB fallback */
+  --vscode-button-foreground: color(display-p3 1.000000 1.000000 1.000000); /* Display P3 */
+  --vscode-button-hoverBackground: #1a98ff; /* sRGB fallback */
+  --vscode-button-hoverBackground: color(display-p3 0.341176 0.611765 1.000000); /* Display P3 */
+  --vscode-textLink-foreground: #008cff; /* sRGB fallback */
+  --vscode-textLink-foreground: color(display-p3 0.267653 0.570512 1.000000); /* Display P3 */
+  --vscode-textLink-activeForeground: #008cff; /* sRGB fallback */
+  --vscode-textLink-activeForeground: color(display-p3 0.267653 0.570512 1.000000); /* Display P3 */
+  --vscode-gitDecoration-addedResourceForeground: #00cab1; /* sRGB fallback */
+  --vscode-gitDecoration-addedResourceForeground: color(display-p3 0.309962 0.827620 0.725102); /* Display P3 */
+  --vscode-gitDecoration-conflictingResourceForeground: #ffca00; /* sRGB fallback */
+  --vscode-gitDecoration-conflictingResourceForeground: color(display-p3 1.000000 0.832068 0.300621); /* Display P3 */
+  --vscode-gitDecoration-modifiedResourceForeground: #008cff; /* sRGB fallback */
+  --vscode-gitDecoration-modifiedResourceForeground: color(display-p3 0.267653 0.570512 1.000000); /* Display P3 */
+  --vscode-gitDecoration-deletedResourceForeground: #ff2e3f; /* sRGB fallback */
+  --vscode-gitDecoration-deletedResourceForeground: color(display-p3 1.000000 0.250216 0.262337); /* Display P3 */
+  --vscode-gitDecoration-untrackedResourceForeground: #00cab1; /* sRGB fallback */
+  --vscode-gitDecoration-untrackedResourceForeground: color(display-p3 0.309962 0.827620 0.725102); /* Display P3 */
+  --vscode-gitDecoration-ignoredResourceForeground: #84848A; /* sRGB fallback */
+  --vscode-gitDecoration-ignoredResourceForeground: color(display-p3 0.517647 0.517647 0.539124); /* Display P3 */
+  --vscode-terminal-titleForeground: #6C6C71; /* sRGB fallback */
+  --vscode-terminal-titleForeground: color(display-p3 0.423529 0.423529 0.441427); /* Display P3 */
+  --vscode-terminal-titleInactiveForeground: #84848A; /* sRGB fallback */
+  --vscode-terminal-titleInactiveForeground: color(display-p3 0.517647 0.517647 0.539124); /* Display P3 */
+  --vscode-terminal-background: #f8f8f8; /* sRGB fallback */
+  --vscode-terminal-background: color(display-p3 0.972549 0.972549 0.972549); /* Display P3 */
+  --vscode-terminal-foreground: #6C6C71; /* sRGB fallback */
+  --vscode-terminal-foreground: color(display-p3 0.423529 0.423529 0.441427); /* Display P3 */
+  --vscode-terminal-ansiBlack: #1F1F21; /* sRGB fallback */
+  --vscode-terminal-ansiBlack: color(display-p3 0.121569 0.121569 0.128729); /* Display P3 */
+  --vscode-terminal-ansiRed: #ff2e3f; /* sRGB fallback */
+  --vscode-terminal-ansiRed: color(display-p3 1.000000 0.250216 0.262337); /* Display P3 */
+  --vscode-terminal-ansiGreen: #0dbe4e; /* sRGB fallback */
+  --vscode-terminal-ansiGreen: color(display-p3 0.298067 0.776115 0.322484); /* Display P3 */
+  --vscode-terminal-ansiYellow: #ffca00; /* sRGB fallback */
+  --vscode-terminal-ansiYellow: color(display-p3 1.000000 0.832068 0.300621); /* Display P3 */
+  --vscode-terminal-ansiBlue: #008cff; /* sRGB fallback */
+  --vscode-terminal-ansiBlue: color(display-p3 0.267653 0.570512 1.000000); /* Display P3 */
+  --vscode-terminal-ansiMagenta: #c635e4; /* sRGB fallback */
+  --vscode-terminal-ansiMagenta: color(display-p3 0.770871 0.230698 0.945253); /* Display P3 */
+  --vscode-terminal-ansiCyan: #08c0ef; /* sRGB fallback */
+  --vscode-terminal-ansiCyan: color(display-p3 0.327292 0.790977 0.995660); /* Display P3 */
+  --vscode-terminal-ansiWhite: #c6c6c8; /* sRGB fallback */
+  --vscode-terminal-ansiWhite: color(display-p3 0.776471 0.776471 0.783616); /* Display P3 */
+  --vscode-terminal-ansiBrightBlack: #1F1F21; /* sRGB fallback */
+  --vscode-terminal-ansiBrightBlack: color(display-p3 0.121569 0.121569 0.128729); /* Display P3 */
+  --vscode-terminal-ansiBrightRed: #ff2e3f; /* sRGB fallback */
+  --vscode-terminal-ansiBrightRed: color(display-p3 1.000000 0.250216 0.262337); /* Display P3 */
+  --vscode-terminal-ansiBrightGreen: #0dbe4e; /* sRGB fallback */
+  --vscode-terminal-ansiBrightGreen: color(display-p3 0.298067 0.776115 0.322484); /* Display P3 */
+  --vscode-terminal-ansiBrightYellow: #ffca00; /* sRGB fallback */
+  --vscode-terminal-ansiBrightYellow: color(display-p3 1.000000 0.832068 0.300621); /* Display P3 */
+  --vscode-terminal-ansiBrightBlue: #008cff; /* sRGB fallback */
+  --vscode-terminal-ansiBrightBlue: color(display-p3 0.267653 0.570512 1.000000); /* Display P3 */
+  --vscode-terminal-ansiBrightMagenta: #c635e4; /* sRGB fallback */
+  --vscode-terminal-ansiBrightMagenta: color(display-p3 0.770871 0.230698 0.945253); /* Display P3 */
+  --vscode-terminal-ansiBrightCyan: #08c0ef; /* sRGB fallback */
+  --vscode-terminal-ansiBrightCyan: color(display-p3 0.327292 0.790977 0.995660); /* Display P3 */
+  --vscode-terminal-ansiBrightWhite: #c6c6c8; /* sRGB fallback */
+  --vscode-terminal-ansiBrightWhite: color(display-p3 0.776471 0.776471 0.783616); /* Display P3 */
+}
+
+/* Explicit Display P3 support for better compatibility */
+@supports (color: color(display-p3 1 1 1)) {
+  :root {
+    --vscode-editor-background: color(display-p3 1.000000 1.000000 1.000000);
+    --vscode-editor-foreground: color(display-p3 0.027451 0.027451 0.027451);
+    --vscode-foreground: color(display-p3 0.027451 0.027451 0.027451);
+    --vscode-focusBorder: color(display-p3 0.267653 0.570512 1.000000);
+    --vscode-selection-background: color(display-p3 0.880188 0.904864 0.991592);
+    --vscode-editor-selectionBackground: color(display-p3 0.267653 0.570512 1.000000 / 0.180000);
+    --vscode-editor-lineHighlightBackground: color(display-p3 0.880188 0.904864 0.991592 / 0.550000);
+    --vscode-editorCursor-foreground: color(display-p3 0.267653 0.570512 1.000000);
+    --vscode-editorLineNumber-foreground: color(display-p3 0.517647 0.517647 0.539124);
+    --vscode-editorLineNumber-activeForeground: color(display-p3 0.423529 0.423529 0.441427);
+    --vscode-editorIndentGuide-background: color(display-p3 0.933333 0.933333 0.936905);
+    --vscode-editorIndentGuide-activeBackground: color(display-p3 0.858824 0.858824 0.865969);
+    --vscode-diffEditor-insertedTextBackground: color(display-p3 0.309962 0.827620 0.725102 / 0.200000);
+    --vscode-diffEditor-deletedTextBackground: color(display-p3 1.000000 0.250216 0.262337 / 0.200000);
+    --vscode-sideBar-background: color(display-p3 0.972549 0.972549 0.972549);
+    --vscode-sideBar-foreground: color(display-p3 0.423529 0.423529 0.441427);
+    --vscode-sideBar-border: color(display-p3 0.933333 0.933333 0.936905);
+    --vscode-sideBarTitle-foreground: color(display-p3 0.027451 0.027451 0.027451);
+    --vscode-sideBarSectionHeader-background: color(display-p3 0.972549 0.972549 0.972549);
+    --vscode-sideBarSectionHeader-foreground: color(display-p3 0.423529 0.423529 0.441427);
+    --vscode-sideBarSectionHeader-border: color(display-p3 0.933333 0.933333 0.936905);
+    --vscode-activityBar-background: color(display-p3 0.972549 0.972549 0.972549);
+    --vscode-activityBar-foreground: color(display-p3 0.027451 0.027451 0.027451);
+    --vscode-activityBar-border: color(display-p3 0.933333 0.933333 0.936905);
+    --vscode-activityBar-activeBorder: color(display-p3 0.267653 0.570512 1.000000);
+    --vscode-activityBarBadge-background: color(display-p3 0.267653 0.570512 1.000000);
+    --vscode-activityBarBadge-foreground: color(display-p3 1.000000 1.000000 1.000000);
+    --vscode-titleBar-activeBackground: color(display-p3 0.972549 0.972549 0.972549);
+    --vscode-titleBar-activeForeground: color(display-p3 0.027451 0.027451 0.027451);
+    --vscode-titleBar-inactiveBackground: color(display-p3 0.972549 0.972549 0.972549);
+    --vscode-titleBar-inactiveForeground: color(display-p3 0.517647 0.517647 0.539124);
+    --vscode-titleBar-border: color(display-p3 0.933333 0.933333 0.936905);
+    --vscode-list-activeSelectionBackground: color(display-p3 0.880188 0.904864 0.991592 / 0.800000);
+    --vscode-list-activeSelectionForeground: color(display-p3 0.027451 0.027451 0.027451);
+    --vscode-list-inactiveSelectionBackground: color(display-p3 0.880188 0.904864 0.991592 / 0.450000);
+    --vscode-list-hoverBackground: color(display-p3 0.880188 0.904864 0.991592 / 0.350000);
+    --vscode-list-focusOutline: color(display-p3 0.267653 0.570512 1.000000);
+    --vscode-tab-activeBackground: color(display-p3 1.000000 1.000000 1.000000);
+    --vscode-tab-activeForeground: color(display-p3 0.027451 0.027451 0.027451);
+    --vscode-tab-activeBorderTop: color(display-p3 0.267653 0.570512 1.000000);
+    --vscode-tab-inactiveBackground: color(display-p3 0.972549 0.972549 0.972549);
+    --vscode-tab-inactiveForeground: color(display-p3 0.517647 0.517647 0.539124);
+    --vscode-tab-border: color(display-p3 0.933333 0.933333 0.936905);
+    --vscode-editorGroupHeader-tabsBackground: color(display-p3 0.972549 0.972549 0.972549);
+    --vscode-editorGroupHeader-tabsBorder: color(display-p3 0.933333 0.933333 0.936905);
+    --vscode-panel-background: color(display-p3 0.972549 0.972549 0.972549);
+    --vscode-panel-border: color(display-p3 0.933333 0.933333 0.936905);
+    --vscode-panelTitle-activeBorder: color(display-p3 0.267653 0.570512 1.000000);
+    --vscode-panelTitle-activeForeground: color(display-p3 0.027451 0.027451 0.027451);
+    --vscode-panelTitle-inactiveForeground: color(display-p3 0.517647 0.517647 0.539124);
+    --vscode-statusBar-background: color(display-p3 0.972549 0.972549 0.972549);
+    --vscode-statusBar-foreground: color(display-p3 0.423529 0.423529 0.441427);
+    --vscode-statusBar-border: color(display-p3 0.933333 0.933333 0.936905);
+    --vscode-statusBar-noFolderBackground: color(display-p3 0.972549 0.972549 0.972549);
+    --vscode-statusBar-debuggingBackground: color(display-p3 1.000000 0.832068 0.300621);
+    --vscode-statusBar-debuggingForeground: color(display-p3 1.000000 1.000000 1.000000);
+    --vscode-statusBarItem-remoteBackground: color(display-p3 0.972549 0.972549 0.972549);
+    --vscode-statusBarItem-remoteForeground: color(display-p3 0.423529 0.423529 0.441427);
+    --vscode-input-background: color(display-p3 0.949020 0.949020 0.952591);
+    --vscode-input-border: color(display-p3 0.858824 0.858824 0.865969);
+    --vscode-input-foreground: color(display-p3 0.027451 0.027451 0.027451);
+    --vscode-input-placeholderForeground: color(display-p3 0.556863 0.556863 0.581925);
+    --vscode-dropdown-background: color(display-p3 0.949020 0.949020 0.952591);
+    --vscode-dropdown-border: color(display-p3 0.858824 0.858824 0.865969);
+    --vscode-dropdown-foreground: color(display-p3 0.027451 0.027451 0.027451);
+    --vscode-button-background: color(display-p3 0.267653 0.570512 1.000000);
+    --vscode-button-foreground: color(display-p3 1.000000 1.000000 1.000000);
+    --vscode-button-hoverBackground: color(display-p3 0.341176 0.611765 1.000000);
+    --vscode-textLink-foreground: color(display-p3 0.267653 0.570512 1.000000);
+    --vscode-textLink-activeForeground: color(display-p3 0.267653 0.570512 1.000000);
+    --vscode-gitDecoration-addedResourceForeground: color(display-p3 0.309962 0.827620 0.725102);
+    --vscode-gitDecoration-conflictingResourceForeground: color(display-p3 1.000000 0.832068 0.300621);
+    --vscode-gitDecoration-modifiedResourceForeground: color(display-p3 0.267653 0.570512 1.000000);
+    --vscode-gitDecoration-deletedResourceForeground: color(display-p3 1.000000 0.250216 0.262337);
+    --vscode-gitDecoration-untrackedResourceForeground: color(display-p3 0.309962 0.827620 0.725102);
+    --vscode-gitDecoration-ignoredResourceForeground: color(display-p3 0.517647 0.517647 0.539124);
+    --vscode-terminal-titleForeground: color(display-p3 0.423529 0.423529 0.441427);
+    --vscode-terminal-titleInactiveForeground: color(display-p3 0.517647 0.517647 0.539124);
+    --vscode-terminal-background: color(display-p3 0.972549 0.972549 0.972549);
+    --vscode-terminal-foreground: color(display-p3 0.423529 0.423529 0.441427);
+    --vscode-terminal-ansiBlack: color(display-p3 0.121569 0.121569 0.128729);
+    --vscode-terminal-ansiRed: color(display-p3 1.000000 0.250216 0.262337);
+    --vscode-terminal-ansiGreen: color(display-p3 0.298067 0.776115 0.322484);
+    --vscode-terminal-ansiYellow: color(display-p3 1.000000 0.832068 0.300621);
+    --vscode-terminal-ansiBlue: color(display-p3 0.267653 0.570512 1.000000);
+    --vscode-terminal-ansiMagenta: color(display-p3 0.770871 0.230698 0.945253);
+    --vscode-terminal-ansiCyan: color(display-p3 0.327292 0.790977 0.995660);
+    --vscode-terminal-ansiWhite: color(display-p3 0.776471 0.776471 0.783616);
+    --vscode-terminal-ansiBrightBlack: color(display-p3 0.121569 0.121569 0.128729);
+    --vscode-terminal-ansiBrightRed: color(display-p3 1.000000 0.250216 0.262337);
+    --vscode-terminal-ansiBrightGreen: color(display-p3 0.298067 0.776115 0.322484);
+    --vscode-terminal-ansiBrightYellow: color(display-p3 1.000000 0.832068 0.300621);
+    --vscode-terminal-ansiBrightBlue: color(display-p3 0.267653 0.570512 1.000000);
+    --vscode-terminal-ansiBrightMagenta: color(display-p3 0.770871 0.230698 0.945253);
+    --vscode-terminal-ansiBrightCyan: color(display-p3 0.327292 0.790977 0.995660);
+    --vscode-terminal-ansiBrightWhite: color(display-p3 0.776471 0.776471 0.783616);
+  }
+}
