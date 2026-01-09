@@ -1,11 +1,12 @@
-name: Publish to VS Marketplace
+name: Publish
 
 on:
   release:
     types: [published]
 
 jobs:
-  publish:
+  package:
+    name: Publish to VS Marketplace & Open VSX
     runs-on: ubuntu-latest
 
     steps:
@@ -24,17 +25,38 @@ jobs:
       - name: Build theme
         run: npm run build
 
-      - name: Package extension
-        run: npm run package
+      - name: Rename package for extension publishing
+        run: jq '.name = "pierre-theme"' package.json > tmp.json && mv tmp.json package.json
 
       - name: Publish to VS Marketplace
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
         run: npx @vscode/vsce publish --pat $VSCE_PAT
 
-      - name: Setup npm authentication
-        run: |
-          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+      - name: Publish to Open VSX
+        env:
+          OVSX_PAT: ${{ secrets.OPEN_VSX_TOKEN }}
+        run: npx ovsx publish --pat $OVSX_PAT
+
+  npm:
+    name: Publish to npm
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          registry-url: 'https://registry.npmjs.org'
 
       - name: Publish to npm
-        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish --access public --provenance
