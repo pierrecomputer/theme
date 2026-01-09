@@ -32,9 +32,9 @@ jobs:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}
         run: npx @vscode/vsce publish --pat $VSCE_PAT
 
-      # - name: Setup npm authentication
-      #   run: |
-      #     echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+      - name: Setup npm authentication
+        run: |
+          echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
-      # - name: Publish to npm
-      #   run: npm publish
+      - name: Publish to npm
+        run: npm publish
