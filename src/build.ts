@@ -6,6 +6,7 @@ import { makeZedThemeFamily } from "./zed-theme";
 import { convertRolesToP3 } from "./color-p3";
 
 mkdirSync("themes", { recursive: true });
+mkdirSync("zed/themes", { recursive: true });
 
 // Convert palettes to Display P3 color space
 const rolesLightP3 = convertRolesToP3(rolesLight);
@@ -32,9 +33,7 @@ for (const {file, theme} of vscodeThemes) {
 const zedTheme = makeZedThemeFamily("Pierre", "pierrecomputer", [
   { name: "Pierre Light", appearance: "light", roles: rolesLight },
   { name: "Pierre Dark", appearance: "dark", roles: rolesDark },
-  { name: "Pierre Light Vibrant", appearance: "light", roles: rolesLightP3 },
-  { name: "Pierre Dark Vibrant", appearance: "dark", roles: rolesDarkP3 },
 ]);
 
-writeFileSync("themes/pierre.zed-theme.json", JSON.stringify(zedTheme, null, 2), "utf8");
-console.log("Wrote themes/pierre.zed-theme.json");
+writeFileSync("zed/themes/pierre.json", JSON.stringify(zedTheme, null, 2), "utf8");
+console.log("Wrote zed/themes/pierre.json");
