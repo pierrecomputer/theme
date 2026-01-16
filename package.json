@@ -2,7 +2,7 @@
   "name": "@pierre/theme",
   "displayName": "Pierre Theme",
   "description": "Pierre theme for Shiki, VS Code, and more",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "publisher": "pierrecomputer",
   "icon": "icon.png",
   "galleryBanner": {

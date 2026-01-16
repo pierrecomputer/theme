@@ -1,6 +1,6 @@
 # Pierre Theme
 
-Light and dark themes for Visual Studio Code, Cursor, and Shiki. Built for [Diffs.com](https://diffs.com) by [The Pierre Computer Company](https://pierre.computer).
+Light and dark themes for Visual Studio Code, Cursor, Zed, and Shiki. Built for [Diffs.com](https://diffs.com) by [The Pierre Computer Company](https://pierre.computer).
 
 ## Preview
 
@@ -28,6 +28,14 @@ From the menu in Cursor:
 - Click install
 
 You can also install or download from the [Open VSX registry](https://open-vsx.org/extension/pierrecomputer/pierre-theme).
+
+### Zed
+
+From the menu in Zed:
+
+- Zed > Extensions (or hit Command+Shift+X or Control+Shift+X)
+- Search for `Pierre`
+- Click install
 
 ## Vibrant themes (Display P3)
 

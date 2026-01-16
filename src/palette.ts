@@ -318,11 +318,11 @@ export const dark: Roles = {
   },
   border: {
     window: gray["1040"],
-    editor: gray["920"],
-    indentGuide: gray["940"],
+    editor: gray["980"],
+    indentGuide: gray["980"],
     indentGuideActive: gray["960"],
-    inset: gray["920"],
-    elevated: gray["960"]
+    inset: gray["980"],
+    elevated: gray["980"]
   },
   accent: {
     primary: blue["500"],
