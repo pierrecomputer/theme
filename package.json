@@ -2,7 +2,7 @@
   "name": "@pierre/theme",
   "displayName": "Pierre Theme",
   "description": "Pierre theme for Shiki, VS Code, and more",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "publisher": "pierrecomputer",
   "icon": "icon.png",
   "galleryBanner": {
@@ -50,10 +50,10 @@
     "package": "ts-node src/package-vsix.ts"
   },
   "devDependencies": {
+    "@vscode/vsce": "^3.2.2",
     "nodemon": "^3.1.11",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.3",
-    "@vscode/vsce": "^3.2.2"
+    "ts-node": "^1.7.1",
+    "typescript": "^5.9.3"
   },
   "publishConfig": {
     "access": "public"
