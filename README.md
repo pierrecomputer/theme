@@ -1,3 +1,5 @@
+![Pierre dark theme screenshot](https://github.com/user-attachments/assets/e8b2a6e0-995b-4515-997a-f805f4fbc5bf)
+
 ```
 PIERRE COMPUTER COMPANY █
 PROJECT: THEME
@@ -15,11 +17,6 @@ OPEN POSITIONS: [Systems Engineer](https://pierre.computer/careers/systems-engin
 # Pierre Theme
 
 Light and dark themes for Visual Studio Code, Cursor, Zed, and Shiki. Built for [Diffs.com](https://diffs.com) by [The Pierre Computer Company](https://pierre.computer).
-
-## Preview
-
-![Pierre dark theme screenshot](https://github.com/user-attachments/assets/e8b2a6e0-995b-4515-997a-f805f4fbc5bf)
-![Pierre light theme screenshot](https://github.com/user-attachments/assets/2ebb09d0-eb42-4c28-9617-35873d96ed8f)
 
 ## Install
 
