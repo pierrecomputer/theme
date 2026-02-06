@@ -1,3 +1,17 @@
+```
+PIERRE COMPUTER COMPANY █
+PROJECT: THEME
+
+~~~
+
+CONTACT: SUPPORT@PIERRE.CO
+LOCATION: USA
+STATUS: ONLINE
+OPEN POSITIONS: [Systems Engineer](https://pierre.computer/careers/systems-engineer)
+
+~~~
+
+
 # Pierre Theme
 
 Light and dark themes for Visual Studio Code, Cursor, Zed, and Shiki. Built for [Diffs.com](https://diffs.com) by [The Pierre Computer Company](https://pierre.computer).
@@ -73,3 +87,4 @@ To override this (or any other) theme in your personal config file, please follo
 ## Credit
 
 This theme was built on top of [GitHub's Visual Studio Code Theme](https://github.com/primer/github-vscode-theme). All credit to them for the technique and build tooling, which we've since iterated on for more specific language tokens.
+```
