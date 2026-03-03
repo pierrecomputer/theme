@@ -1,7 +1,7 @@
-id = "pierre"
+id = "pierre-theme"
 name = "Pierre"
 description = "A warm, orange-accented color theme with light and dark variants"
-version = "0.0.1"
+version = "0.0.23"
 schema_version = 1
 authors = ["pierrecomputer"]
 repository = "https://github.com/pierrecomputer/pierre-theme"
