@@ -277,7 +277,7 @@ export const light: Roles = {
     namespace: yellow["600"],
     decorator: blue["500"],
     escape: cyan["600"],
-    invalid: "#ffffff",
+    invalid: gray["1040"],
     tag: red["600"],
     attribute: mint["600"]
   },
@@ -354,7 +354,7 @@ export const dark: Roles = {
     namespace: yellow["500"],
     decorator: blue["400"],
     escape: cyan["400"],
-    invalid: "#ffffff",
+    invalid: gray["020"],
     tag: red["400"],
     attribute: mint["400"]
   },

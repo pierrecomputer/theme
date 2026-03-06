@@ -1405,7 +1405,7 @@
     {
       "scope": "constant.other.color.rgb-value.xi",
       "settings": {
-        "foreground": "#ffffff"
+        "foreground": "#fbfbfb"
       }
     },
     {
@@ -1874,25 +1874,25 @@
     {
       "scope": "invalid.illegal",
       "settings": {
-        "foreground": "#ffffff"
+        "foreground": "#fbfbfb"
       }
     },
     {
       "scope": "invalid.broken",
       "settings": {
-        "foreground": "#ffffff"
+        "foreground": "#fbfbfb"
       }
     },
     {
       "scope": "invalid.deprecated",
       "settings": {
-        "foreground": "#ffffff"
+        "foreground": "#fbfbfb"
       }
     },
     {
       "scope": "invalid.unimplemented",
       "settings": {
-        "foreground": "#ffffff"
+        "foreground": "#fbfbfb"
       }
     }
   ],
