@@ -44,6 +44,20 @@ jobs:
           fi
           echo "✅ All theme files generated successfully"
 
+      - name: Verify ESM wrapper modules exist
+        run: |
+          for theme in pierre-dark pierre-light pierre-dark-vibrant pierre-light-vibrant; do
+            if [ ! -f "dist/${theme}.mjs" ]; then
+              echo "❌ dist/${theme}.mjs not generated"
+              exit 1
+            fi
+          done
+          if [ ! -f "dist/index.mjs" ]; then
+            echo "❌ dist/index.mjs not generated"
+            exit 1
+          fi
+          echo "✅ All ESM wrapper modules generated successfully"
+
       - name: Check file sizes
         run: |
           light_size=$(wc -c < themes/pierre-light.json)

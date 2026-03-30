@@ -2,7 +2,7 @@
   "name": "@pierre/theme",
   "displayName": "Pierre Theme",
   "description": "Pierre theme for Shiki, VS Code, and more",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "publisher": "pierrecomputer",
   "icon": "icon.png",
   "galleryBanner": {
@@ -47,13 +47,23 @@
     "build": "ts-node src/build.ts",
     "test": "npm run build && ts-node src/test.ts",
     "start": "nodemon --watch src --ext ts --exec npm run build",
-    "package": "ts-node src/package-vsix.ts"
+    "package": "ts-node src/package-vsix.ts",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@vscode/vsce": "^3.2.2",
     "nodemon": "^3.1.11",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
+  },
+  "sideEffects": false,
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./pierre-dark": "./dist/pierre-dark.mjs",
+    "./pierre-light": "./dist/pierre-light.mjs",
+    "./pierre-dark-vibrant": "./dist/pierre-dark-vibrant.mjs",
+    "./pierre-light-vibrant": "./dist/pierre-light-vibrant.mjs",
+    "./themes/*": "./themes/*"
   },
   "publishConfig": {
     "access": "public"
