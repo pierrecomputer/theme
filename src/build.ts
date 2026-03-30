@@ -37,3 +37,24 @@ const zedTheme = makeZedThemeFamily("Pierre", "pierrecomputer", [
 
 writeFileSync("zed/themes/pierre.json", JSON.stringify(zedTheme, null, 2), "utf8");
 console.log("Wrote zed/themes/pierre.json");
+
+// ============================================
+// ESM wrapper modules (for npm / Shiki consumers)
+// ============================================
+mkdirSync("dist", { recursive: true });
+
+const themeNames: string[] = [];
+
+for (const { file, theme } of vscodeThemes) {
+  const name = file.replace("themes/", "").replace(".json", "");
+  themeNames.push(name);
+  const json = JSON.stringify(theme);
+  const escaped = json.replace(/\\/g, "\\\\").replace(/'/g, "\\'");
+  const mjs = `export default Object.freeze(JSON.parse('${escaped}'))\n`;
+  writeFileSync(`dist/${name}.mjs`, mjs, "utf8");
+  console.log("Wrote", `dist/${name}.mjs`);
+}
+
+const indexMjs = `export const themeNames = ${JSON.stringify(themeNames)}\n`;
+writeFileSync("dist/index.mjs", indexMjs, "utf8");
+console.log("Wrote dist/index.mjs");
