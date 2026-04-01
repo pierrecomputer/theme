@@ -45,6 +45,24 @@ mkdirSync("dist", { recursive: true });
 
 const themeNames: string[] = [];
 
+/** VS Code / Shiki theme shape exposed by each per-theme module. */
+const themeDts = `/** VS Code / TextMate theme object (frozen at runtime). */
+interface PierreTheme {
+  readonly name: string;
+  readonly type: "light" | "dark";
+  readonly colors: Readonly<Record<string, string>>;
+  readonly tokenColors: ReadonlyArray<{
+    readonly name?: string;
+    readonly scope?: string | string[];
+    readonly settings: Readonly<Record<string, string>>;
+  }>;
+  readonly semanticTokenColors: Readonly<Record<string, string | Record<string, string>>>;
+}
+
+declare const theme: PierreTheme;
+export default theme;
+`;
+
 for (const { file, theme } of vscodeThemes) {
   const name = file.replace("themes/", "").replace(".json", "");
   themeNames.push(name);
@@ -52,9 +70,12 @@ for (const { file, theme } of vscodeThemes) {
   const escaped = json.replace(/\\/g, "\\\\").replace(/'/g, "\\'");
   const mjs = `export default Object.freeze(JSON.parse('${escaped}'))\n`;
   writeFileSync(`dist/${name}.mjs`, mjs, "utf8");
-  console.log("Wrote", `dist/${name}.mjs`);
+  writeFileSync(`dist/${name}.d.mts`, themeDts, "utf8");
+  console.log("Wrote", `dist/${name}.mjs`, `+ .d.mts`);
 }
 
 const indexMjs = `export const themeNames = ${JSON.stringify(themeNames)}\n`;
+const indexDts = `export declare const themeNames: readonly string[];\n`;
 writeFileSync("dist/index.mjs", indexMjs, "utf8");
-console.log("Wrote dist/index.mjs");
+writeFileSync("dist/index.d.mts", indexDts, "utf8");
+console.log("Wrote dist/index.mjs + .d.mts");

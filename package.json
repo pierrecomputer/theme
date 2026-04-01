@@ -2,7 +2,7 @@
   "name": "@pierre/theme",
   "displayName": "Pierre Theme",
   "description": "Pierre theme for Shiki, VS Code, and more",
-  "version": "0.0.26",
+  "version": "0.0.27",
   "publisher": "pierrecomputer",
   "icon": "icon.png",
   "galleryBanner": {
@@ -63,11 +63,26 @@
     "icon.png"
   ],
   "exports": {
-    ".": "./dist/index.mjs",
-    "./pierre-dark": "./dist/pierre-dark.mjs",
-    "./pierre-light": "./dist/pierre-light.mjs",
-    "./pierre-dark-vibrant": "./dist/pierre-dark-vibrant.mjs",
-    "./pierre-light-vibrant": "./dist/pierre-light-vibrant.mjs",
+    ".": {
+      "types": "./dist/index.d.mts",
+      "default": "./dist/index.mjs"
+    },
+    "./pierre-dark": {
+      "types": "./dist/pierre-dark.d.mts",
+      "default": "./dist/pierre-dark.mjs"
+    },
+    "./pierre-light": {
+      "types": "./dist/pierre-light.d.mts",
+      "default": "./dist/pierre-light.mjs"
+    },
+    "./pierre-dark-vibrant": {
+      "types": "./dist/pierre-dark-vibrant.d.mts",
+      "default": "./dist/pierre-dark-vibrant.mjs"
+    },
+    "./pierre-light-vibrant": {
+      "types": "./dist/pierre-light-vibrant.d.mts",
+      "default": "./dist/pierre-light-vibrant.mjs"
+    },
     "./themes/*": "./themes/*"
   },
   "publishConfig": {
