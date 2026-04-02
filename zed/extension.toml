@@ -1,6 +1,6 @@
 id = "pierre-theme"
 name = "Pierre"
-description = "A warm, orange-accented color theme with light and dark variants"
+description = "Modern light and dark color themes built by Pierre for Diffs.com, and now for you."
 version = "0.0.28"
 schema_version = 1
 authors = ["pierrecomputer"]
