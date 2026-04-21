@@ -1,0 +1,25 @@
+name: Pierre Light
+accent: '#009fff'
+cursor: '#009fff'
+background: '#ffffff'
+foreground: '#070707'
+details: lighter
+terminal_colors:
+  normal:
+    black: '#1F1F21'
+    red: '#ff2e3f'
+    green: '#0dbe4e'
+    yellow: '#ffca00'
+    blue: '#009fff'
+    magenta: '#c635e4'
+    cyan: '#08c0ef'
+    white: '#c6c6c8'
+  bright:
+    black: '#1F1F21'
+    red: '#ff2e3f'
+    green: '#0dbe4e'
+    yellow: '#ffca00'
+    blue: '#009fff'
+    magenta: '#c635e4'
+    cyan: '#08c0ef'
+    white: '#c6c6c8'

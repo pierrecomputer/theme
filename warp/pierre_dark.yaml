@@ -1,0 +1,25 @@
+name: Pierre Dark
+accent: '#009fff'
+cursor: '#009fff'
+background: '#070707'
+foreground: '#fbfbfb'
+details: darker
+terminal_colors:
+  normal:
+    black: '#141415'
+    red: '#ff2e3f'
+    green: '#0dbe4e'
+    yellow: '#ffca00'
+    blue: '#009fff'
+    magenta: '#c635e4'
+    cyan: '#08c0ef'
+    white: '#c6c6c8'
+  bright:
+    black: '#141415'
+    red: '#ff2e3f'
+    green: '#0dbe4e'
+    yellow: '#ffca00'
+    blue: '#009fff'
+    magenta: '#c635e4'
+    cyan: '#08c0ef'
+    white: '#c6c6c8'
