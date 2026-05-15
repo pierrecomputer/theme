@@ -130,11 +130,19 @@ export function makeTheme(name: string, kind: "light"|"dark", c: Roles): VSCodeT
 
       // Git colors
       "gitDecoration.addedResourceForeground": c.states.success,
-      "gitDecoration.conflictingResourceForeground": c.states.warn,
+      "gitDecoration.conflictingResourceForeground": c.states.merge,
       "gitDecoration.modifiedResourceForeground": c.accent.primary,
       "gitDecoration.deletedResourceForeground": c.states.danger,
       "gitDecoration.untrackedResourceForeground": c.states.success,
       "gitDecoration.ignoredResourceForeground": c.fg.fg3,
+
+      // Merge conflicts
+      "merge.currentHeaderBackground": alpha(c.states.merge, kind === "dark" ? 0.30 : 0.20),
+      "merge.currentContentBackground": alpha(c.states.merge, kind === "dark" ? 0.12 : 0.08),
+      "merge.incomingHeaderBackground": alpha(c.states.info, kind === "dark" ? 0.30 : 0.20),
+      "merge.incomingContentBackground": alpha(c.states.info, kind === "dark" ? 0.12 : 0.08),
+      "editorOverviewRuler.currentContentForeground": c.states.merge,
+      "editorOverviewRuler.incomingContentForeground": c.states.info,
 
       // Terminal ANSI colors
       "terminal.titleForeground": c.fg.fg2,
@@ -281,6 +289,13 @@ export function makeTheme(name: string, kind: "light"|"dark", c: Roles): VSCodeT
       { scope: "support.type.primitive", settings: { foreground: c.syntax.type } },
 
       // ========================================
+      // DECORATORS
+      // ========================================
+      { scope: ["meta.decorator","meta.decorator punctuation.decorator"], settings: { foreground: c.syntax.decorator } },
+      { scope: "entity.name.function.decorator", settings: { foreground: c.syntax.decorator } },
+      { scope: "punctuation.definition.decorator", settings: { foreground: c.syntax.decorator } },
+
+      // ========================================
       // PYTHON SPECIFIC
       // ========================================
       { scope: "support.variable.magic.python", settings: { foreground: c.syntax.tag } },
@@ -357,7 +372,7 @@ export function makeTheme(name: string, kind: "light"|"dark", c: Roles): VSCodeT
       { scope: "keyword.operator.comparison.php", settings: { foreground: c.syntax.operator } },
       { scope: ["keyword.operator.heredoc.php","keyword.operator.nowdoc.php"], settings: { foreground: c.syntax.keyword } },
       { scope: "variable.other.class.php", settings: { foreground: c.syntax.tag } },
-      { scope: "invalid.illegal.non-null-typehinted.php", settings: { foreground: "#f44747" } },
+      { scope: "invalid.illegal.non-null-typehinted.php", settings: { foreground: c.syntax.invalid } },
 
       // ========================================
       // HASKELL SPECIFIC
@@ -548,7 +563,7 @@ export function makeTheme(name: string, kind: "light"|"dark", c: Roles): VSCodeT
 
       { scope: "token.info-token", settings: { foreground: c.syntax.func } },
       { scope: "token.warn-token", settings: { foreground: c.syntax.constant } },
-      { scope: "token.error-token", settings: { foreground: "#f44747" } },
+      { scope: "token.error-token", settings: { foreground: c.syntax.invalid } },
       { scope: "token.debug-token", settings: { foreground: c.syntax.keyword } },
 
       // ========================================
@@ -579,7 +594,8 @@ export function makeTheme(name: string, kind: "light"|"dark", c: Roles): VSCodeT
       // constants and special
       enumMember: c.syntax.operator,
       "variable.constant": c.syntax.constant,
-      "variable.defaultLibrary": c.syntax.namespace
+      "variable.defaultLibrary": c.syntax.namespace,
+      decorator: c.syntax.decorator,
     }
   };
 }

@@ -318,9 +318,9 @@ function makeZedTheme(
       deleted: c.states.danger,
       "deleted.background": alpha(c.states.danger, 0.1),
       "deleted.border": alpha(c.states.danger, 0.3),
-      conflict: c.accent.primary,
-      "conflict.background": alpha(c.accent.primary, 0.1),
-      "conflict.border": alpha(c.accent.primary, 0.3),
+      conflict: c.states.merge,
+      "conflict.background": alpha(c.states.merge, 0.1),
+      "conflict.border": alpha(c.states.merge, 0.3),
       hidden: c.fg.fg4,
       "hidden.background": alpha(c.fg.fg4, 0.05),
       "hidden.border": alpha(c.fg.fg4, 0.1),
@@ -544,6 +544,10 @@ function makeZedTheme(
         // Labels & Namespaces
         label: { color: c.syntax.namespace },
         namespace: { color: c.syntax.namespace },
+
+        // Decorators
+        decorator: { color: c.syntax.decorator },
+        "attribute.builtin": { color: c.syntax.decorator },
 
         // Embedded / Preprocessor
         embedded: { color: c.fg.base },

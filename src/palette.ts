@@ -1,5 +1,7 @@
 // src/palette.ts
 
+// gray is a slightly blue-tinted neutral scale kept as a reference palette for consumers.
+// It is not used in any built-in role; all four theme variants use `neutral` instead.
 const gray = {
   "020":"#fbfbfb",
   "040":"#f9f9f9",
@@ -403,11 +405,11 @@ export const light: Roles = {
     punctuation: neutral["700"],
     constant: yellow["600"],
     parameter: neutral["700"],
-    namespace: yellow["600"],
+    namespace: amber["600"],
     decorator: blue["600"],
-    escape: cyan["600"],
+    escape: mint["600"],
     invalid: neutral["1040"],
-    tag: red["600"],
+    tag: vermillion["600"],
     attribute: jade["600"]
   },
   ansi: {
@@ -416,16 +418,16 @@ export const light: Roles = {
     green: jade["600"],
     yellow: yellow["600"],
     blue: blue["600"],
-    magenta: purple["600"],
+    magenta: magenta["600"],
     cyan: cyan["600"],
     white: neutral["300"],
     // make bright colors match the non-bright counterparts
     brightBlack: neutral["980"],
     brightRed: red["600"],
-    brightGreen: jade["600"],
+    brightGreen: lime["600"],
     brightYellow: yellow["600"],
     brightBlue: blue["600"],
-    brightMagenta: purple["600"],
+    brightMagenta: magenta["600"],
     brightCyan: cyan["600"],
     brightWhite: neutral["300"]
   }
@@ -480,11 +482,11 @@ export const lightSoft: Roles = {
     punctuation: neutral["600"],
     constant: yellow["500"],
     parameter: neutral["600"],
-    namespace: yellow["500"],
+    namespace: amber["500"],
     decorator: blue["400"],
-    escape: cyan["500"],
+    escape: mint["500"],
     invalid: neutral["1000"],
-    tag: red["500"],
+    tag: vermillion["500"],
     attribute: jade["500"]
   },
   ansi: {
@@ -493,15 +495,15 @@ export const lightSoft: Roles = {
     green: green["500"],
     yellow: yellow["500"],
     blue: blue["500"],
-    magenta: purple["500"],
+    magenta: magenta["500"],
     cyan: cyan["500"],
     white: neutral["300"],
     brightBlack: neutral["980"],
     brightRed: red["500"],
-    brightGreen: green["500"],
+    brightGreen: lime["500"],
     brightYellow: yellow["500"],
     brightBlue: blue["500"],
-    brightMagenta: purple["500"],
+    brightMagenta: magenta["500"],
     brightCyan: cyan["500"],
     brightWhite: neutral["300"]
   }
@@ -556,11 +558,11 @@ export const dark: Roles = {
     punctuation: neutral["700"],
     constant: yellow["400"],
     parameter: neutral["400"],
-    namespace: yellow["500"],
+    namespace: amber["500"],
     decorator: blue["400"],
-    escape: cyan["400"],
+    escape: mint["400"],
     invalid: neutral["020"],
-    tag: red["400"],
+    tag: vermillion["400"],
     attribute: jade["400"]
   },
   ansi: {
@@ -569,15 +571,15 @@ export const dark: Roles = {
     green: green["500"],
     yellow: yellow["500"],
     blue: blue["500"],
-    magenta: purple["500"],
+    magenta: magenta["500"],
     cyan: cyan["500"],
     white: neutral["300"],
     brightBlack: neutral["1000"],
     brightRed: red["500"],
-    brightGreen: green["500"],
+    brightGreen: lime["500"],
     brightYellow: yellow["500"],
     brightBlue: blue["500"],
-    brightMagenta: purple["500"],
+    brightMagenta: magenta["500"],
     brightCyan: cyan["500"],
     brightWhite: neutral["300"]
   }
@@ -632,11 +634,11 @@ export const darkSoft: Roles = {
     punctuation: neutral["600"],
     constant: yellow["300"],
     parameter: neutral["500"],
-    namespace: yellow["400"],
+    namespace: amber["400"],
     decorator: blue["300"],
-    escape: cyan["300"],
+    escape: mint["300"],
     invalid: neutral["200"],
-    tag: red["300"],
+    tag: vermillion["300"],
     attribute: jade["300"]
   },
   ansi: {
@@ -645,15 +647,15 @@ export const darkSoft: Roles = {
     green: green["500"],
     yellow: yellow["500"],
     blue: blue["500"],
-    magenta: purple["500"],
+    magenta: magenta["500"],
     cyan: cyan["500"],
     white: neutral["300"],
     brightBlack: neutral["1000"],
     brightRed: red["500"],
-    brightGreen: green["500"],
+    brightGreen: lime["500"],
     brightYellow: yellow["500"],
     brightBlue: blue["500"],
-    brightMagenta: purple["500"],
+    brightMagenta: magenta["500"],
     brightCyan: cyan["500"],
     brightWhite: neutral["300"]
   }

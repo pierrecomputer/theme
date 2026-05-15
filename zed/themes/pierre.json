@@ -84,9 +84,9 @@
         "deleted": "#d52c36",
         "deleted.background": "#d52c361a",
         "deleted.border": "#d52c364d",
-        "conflict": "#009fff",
-        "conflict.background": "#009fff1a",
-        "conflict.border": "#009fff4d",
+        "conflict": "#693acf",
+        "conflict.background": "#693acf1a",
+        "conflict.border": "#693acf4d",
         "hidden": "#8a8a8a",
         "hidden.background": "#8a8a8a0d",
         "hidden.border": "#8a8a8a1a",
@@ -120,15 +120,15 @@
         "terminal.ansi.green": "#18a46c",
         "terminal.ansi.yellow": "#d5a910",
         "terminal.ansi.blue": "#1a85d4",
-        "terminal.ansi.magenta": "#a631be",
+        "terminal.ansi.magenta": "#bd2e90",
         "terminal.ansi.cyan": "#1ca1c7",
         "terminal.ansi.white": "#bcbcbc",
         "terminal.ansi.bright_black": "#1d1d1d",
         "terminal.ansi.bright_red": "#d52c36",
-        "terminal.ansi.bright_green": "#18a46c",
+        "terminal.ansi.bright_green": "#77a42a",
         "terminal.ansi.bright_yellow": "#d5a910",
         "terminal.ansi.bright_blue": "#1a85d4",
-        "terminal.ansi.bright_magenta": "#a631be",
+        "terminal.ansi.bright_magenta": "#bd2e90",
         "terminal.ansi.bright_cyan": "#1ca1c7",
         "terminal.ansi.bright_white": "#bcbcbc",
         "players": [
@@ -184,13 +184,13 @@
             "color": "#199f43"
           },
           "string.escape": {
-            "color": "#1ca1c7"
+            "color": "#16a994"
           },
           "string.regex": {
             "color": "#17a5af"
           },
           "string.special": {
-            "color": "#1ca1c7"
+            "color": "#16a994"
           },
           "string.special.symbol": {
             "color": "#d5a910"
@@ -238,7 +238,7 @@
             "color": "#d47628"
           },
           "variable.builtin": {
-            "color": "#d5a910"
+            "color": "#d5901c"
           },
           "variable.member": {
             "color": "#d47628"
@@ -247,7 +247,7 @@
             "color": "#636363"
           },
           "variable.special": {
-            "color": "#d5a910"
+            "color": "#d5901c"
           },
           "property": {
             "color": "#d47628"
@@ -274,10 +274,10 @@
             "color": "#1ca1c7"
           },
           "tag.css": {
-            "color": "#d52c36"
+            "color": "#d5512f"
           },
           "tag_name": {
-            "color": "#d52c36"
+            "color": "#d5512f"
           },
           "class": {
             "color": "#18a46c"
@@ -337,13 +337,13 @@
             "color": "#d32a61"
           },
           "variable.language": {
-            "color": "#d5a910"
+            "color": "#d5901c"
           },
           "this": {
-            "color": "#d5a910"
+            "color": "#d5901c"
           },
           "self": {
-            "color": "#d5a910"
+            "color": "#d5901c"
           },
           "type.class": {
             "color": "#a631be"
@@ -373,7 +373,7 @@
             "color": "#199f43"
           },
           "tag.jsx": {
-            "color": "#d52c36"
+            "color": "#d5512f"
           },
           "tag.component": {
             "color": "#a631be"
@@ -397,16 +397,22 @@
             "color": "#08c0ef"
           },
           "tag": {
-            "color": "#d52c36"
+            "color": "#d5512f"
           },
           "attribute": {
             "color": "#18a46c"
           },
           "label": {
-            "color": "#d5a910"
+            "color": "#d5901c"
           },
           "namespace": {
-            "color": "#d5a910"
+            "color": "#d5901c"
+          },
+          "decorator": {
+            "color": "#1a85d4"
+          },
+          "attribute.builtin": {
+            "color": "#1a85d4"
           },
           "embedded": {
             "color": "#0a0a0a"
@@ -418,7 +424,7 @@
             "color": "#199f43"
           },
           "markup.heading": {
-            "color": "#d52c36",
+            "color": "#d5512f",
             "font_weight": 700
           },
           "markup.bold": {
@@ -443,13 +449,13 @@
             "font_style": "italic"
           },
           "markup.list": {
-            "color": "#d52c36"
+            "color": "#d5512f"
           },
           "markup.list.numbered": {
-            "color": "#d52c36"
+            "color": "#d5512f"
           },
           "markup.list.unnumbered": {
-            "color": "#d52c36"
+            "color": "#d5512f"
           },
           "markup.raw": {
             "color": "#199f43"
@@ -485,7 +491,7 @@
             "color": "#009fff"
           },
           "title": {
-            "color": "#d52c36",
+            "color": "#d5512f",
             "font_weight": 700
           },
           "predictive": {
@@ -576,9 +582,9 @@
         "deleted": "#ff2e3f",
         "deleted.background": "#ff2e3f1a",
         "deleted.border": "#ff2e3f4d",
-        "conflict": "#009fff",
-        "conflict.background": "#009fff1a",
-        "conflict.border": "#009fff4d",
+        "conflict": "#7b43f8",
+        "conflict.background": "#7b43f81a",
+        "conflict.border": "#7b43f84d",
         "hidden": "#a3a3a3",
         "hidden.background": "#a3a3a30d",
         "hidden.border": "#a3a3a31a",
@@ -612,15 +618,15 @@
         "terminal.ansi.green": "#0dbe4e",
         "terminal.ansi.yellow": "#ffca00",
         "terminal.ansi.blue": "#009fff",
-        "terminal.ansi.magenta": "#c635e4",
+        "terminal.ansi.magenta": "#e130ac",
         "terminal.ansi.cyan": "#08c0ef",
         "terminal.ansi.white": "#bcbcbc",
         "terminal.ansi.bright_black": "#1d1d1d",
         "terminal.ansi.bright_red": "#ff2e3f",
-        "terminal.ansi.bright_green": "#0dbe4e",
+        "terminal.ansi.bright_green": "#86c427",
         "terminal.ansi.bright_yellow": "#ffca00",
         "terminal.ansi.bright_blue": "#009fff",
-        "terminal.ansi.bright_magenta": "#c635e4",
+        "terminal.ansi.bright_magenta": "#e130ac",
         "terminal.ansi.bright_cyan": "#08c0ef",
         "terminal.ansi.bright_white": "#bcbcbc",
         "players": [
@@ -676,13 +682,13 @@
             "color": "#0dbe4e"
           },
           "string.escape": {
-            "color": "#08c0ef"
+            "color": "#00cab1"
           },
           "string.regex": {
             "color": "#00c5d2"
           },
           "string.special": {
-            "color": "#08c0ef"
+            "color": "#00cab1"
           },
           "string.special.symbol": {
             "color": "#ffca00"
@@ -730,7 +736,7 @@
             "color": "#fe8c2c"
           },
           "variable.builtin": {
-            "color": "#ffca00"
+            "color": "#ffab16"
           },
           "variable.member": {
             "color": "#fe8c2c"
@@ -739,7 +745,7 @@
             "color": "#737373"
           },
           "variable.special": {
-            "color": "#ffca00"
+            "color": "#ffab16"
           },
           "property": {
             "color": "#fe8c2c"
@@ -766,10 +772,10 @@
             "color": "#08c0ef"
           },
           "tag.css": {
-            "color": "#ff2e3f"
+            "color": "#ff5d36"
           },
           "tag_name": {
-            "color": "#ff2e3f"
+            "color": "#ff5d36"
           },
           "class": {
             "color": "#07c480"
@@ -829,13 +835,13 @@
             "color": "#ff678d"
           },
           "variable.language": {
-            "color": "#ffca00"
+            "color": "#ffab16"
           },
           "this": {
-            "color": "#ffca00"
+            "color": "#ffab16"
           },
           "self": {
-            "color": "#ffca00"
+            "color": "#ffab16"
           },
           "type.class": {
             "color": "#d568ea"
@@ -865,7 +871,7 @@
             "color": "#0dbe4e"
           },
           "tag.jsx": {
-            "color": "#ff2e3f"
+            "color": "#ff5d36"
           },
           "tag.component": {
             "color": "#d568ea"
@@ -889,16 +895,22 @@
             "color": "#68cdf2"
           },
           "tag": {
-            "color": "#ff2e3f"
+            "color": "#ff5d36"
           },
           "attribute": {
             "color": "#07c480"
           },
           "label": {
-            "color": "#ffca00"
+            "color": "#ffab16"
           },
           "namespace": {
-            "color": "#ffca00"
+            "color": "#ffab16"
+          },
+          "decorator": {
+            "color": "#69b1ff"
+          },
+          "attribute.builtin": {
+            "color": "#69b1ff"
           },
           "embedded": {
             "color": "#525252"
@@ -910,7 +922,7 @@
             "color": "#0dbe4e"
           },
           "markup.heading": {
-            "color": "#ff2e3f",
+            "color": "#ff5d36",
             "font_weight": 700
           },
           "markup.bold": {
@@ -935,13 +947,13 @@
             "font_style": "italic"
           },
           "markup.list": {
-            "color": "#ff2e3f"
+            "color": "#ff5d36"
           },
           "markup.list.numbered": {
-            "color": "#ff2e3f"
+            "color": "#ff5d36"
           },
           "markup.list.unnumbered": {
-            "color": "#ff2e3f"
+            "color": "#ff5d36"
           },
           "markup.raw": {
             "color": "#0dbe4e"
@@ -977,7 +989,7 @@
             "color": "#009fff"
           },
           "title": {
-            "color": "#ff2e3f",
+            "color": "#ff5d36",
             "font_weight": 700
           },
           "predictive": {
@@ -1068,9 +1080,9 @@
         "deleted": "#ff2e3f",
         "deleted.background": "#ff2e3f1a",
         "deleted.border": "#ff2e3f4d",
-        "conflict": "#009fff",
-        "conflict.background": "#009fff1a",
-        "conflict.border": "#009fff4d",
+        "conflict": "#7b43f8",
+        "conflict.background": "#7b43f81a",
+        "conflict.border": "#7b43f84d",
         "hidden": "#636363",
         "hidden.background": "#6363630d",
         "hidden.border": "#6363631a",
@@ -1104,15 +1116,15 @@
         "terminal.ansi.green": "#0dbe4e",
         "terminal.ansi.yellow": "#ffca00",
         "terminal.ansi.blue": "#009fff",
-        "terminal.ansi.magenta": "#c635e4",
+        "terminal.ansi.magenta": "#e130ac",
         "terminal.ansi.cyan": "#08c0ef",
         "terminal.ansi.white": "#bcbcbc",
         "terminal.ansi.bright_black": "#171717",
         "terminal.ansi.bright_red": "#ff2e3f",
-        "terminal.ansi.bright_green": "#0dbe4e",
+        "terminal.ansi.bright_green": "#86c427",
         "terminal.ansi.bright_yellow": "#ffca00",
         "terminal.ansi.bright_blue": "#009fff",
-        "terminal.ansi.bright_magenta": "#c635e4",
+        "terminal.ansi.bright_magenta": "#e130ac",
         "terminal.ansi.bright_cyan": "#08c0ef",
         "terminal.ansi.bright_white": "#bcbcbc",
         "players": [
@@ -1168,13 +1180,13 @@
             "color": "#5ecc71"
           },
           "string.escape": {
-            "color": "#68cdf2"
+            "color": "#61d5c0"
           },
           "string.regex": {
             "color": "#64d1db"
           },
           "string.special": {
-            "color": "#68cdf2"
+            "color": "#61d5c0"
           },
           "string.special.symbol": {
             "color": "#ffd452"
@@ -1222,7 +1234,7 @@
             "color": "#ffa359"
           },
           "variable.builtin": {
-            "color": "#ffca00"
+            "color": "#ffab16"
           },
           "variable.member": {
             "color": "#ffa359"
@@ -1231,7 +1243,7 @@
             "color": "#a3a3a3"
           },
           "variable.special": {
-            "color": "#ffca00"
+            "color": "#ffab16"
           },
           "property": {
             "color": "#ffa359"
@@ -1258,10 +1270,10 @@
             "color": "#68cdf2"
           },
           "tag.css": {
-            "color": "#ff6762"
+            "color": "#ff855e"
           },
           "tag_name": {
-            "color": "#ff6762"
+            "color": "#ff855e"
           },
           "class": {
             "color": "#60d199"
@@ -1321,13 +1333,13 @@
             "color": "#ff678d"
           },
           "variable.language": {
-            "color": "#ffca00"
+            "color": "#ffab16"
           },
           "this": {
-            "color": "#ffca00"
+            "color": "#ffab16"
           },
           "self": {
-            "color": "#ffca00"
+            "color": "#ffab16"
           },
           "type.class": {
             "color": "#d568ea"
@@ -1357,7 +1369,7 @@
             "color": "#5ecc71"
           },
           "tag.jsx": {
-            "color": "#ff6762"
+            "color": "#ff855e"
           },
           "tag.component": {
             "color": "#d568ea"
@@ -1381,16 +1393,22 @@
             "color": "#08c0ef"
           },
           "tag": {
-            "color": "#ff6762"
+            "color": "#ff855e"
           },
           "attribute": {
             "color": "#60d199"
           },
           "label": {
-            "color": "#ffca00"
+            "color": "#ffab16"
           },
           "namespace": {
-            "color": "#ffca00"
+            "color": "#ffab16"
+          },
+          "decorator": {
+            "color": "#69b1ff"
+          },
+          "attribute.builtin": {
+            "color": "#69b1ff"
           },
           "embedded": {
             "color": "#fafafa"
@@ -1402,7 +1420,7 @@
             "color": "#5ecc71"
           },
           "markup.heading": {
-            "color": "#ff6762",
+            "color": "#ff855e",
             "font_weight": 700
           },
           "markup.bold": {
@@ -1427,13 +1445,13 @@
             "font_style": "italic"
           },
           "markup.list": {
-            "color": "#ff6762"
+            "color": "#ff855e"
           },
           "markup.list.numbered": {
-            "color": "#ff6762"
+            "color": "#ff855e"
           },
           "markup.list.unnumbered": {
-            "color": "#ff6762"
+            "color": "#ff855e"
           },
           "markup.raw": {
             "color": "#5ecc71"
@@ -1469,7 +1487,7 @@
             "color": "#009fff"
           },
           "title": {
-            "color": "#ff6762",
+            "color": "#ff855e",
             "font_weight": 700
           },
           "predictive": {
@@ -1560,9 +1578,9 @@
         "deleted": "#ff6762",
         "deleted.background": "#ff67621a",
         "deleted.border": "#ff67624d",
-        "conflict": "#69b1ff",
-        "conflict.background": "#69b1ff1a",
-        "conflict.border": "#69b1ff4d",
+        "conflict": "#9d6afb",
+        "conflict.background": "#9d6afb1a",
+        "conflict.border": "#9d6afb4d",
         "hidden": "#525252",
         "hidden.background": "#5252520d",
         "hidden.border": "#5252521a",
@@ -1596,15 +1614,15 @@
         "terminal.ansi.green": "#0dbe4e",
         "terminal.ansi.yellow": "#ffca00",
         "terminal.ansi.blue": "#009fff",
-        "terminal.ansi.magenta": "#c635e4",
+        "terminal.ansi.magenta": "#e130ac",
         "terminal.ansi.cyan": "#08c0ef",
         "terminal.ansi.white": "#bcbcbc",
         "terminal.ansi.bright_black": "#171717",
         "terminal.ansi.bright_red": "#ff2e3f",
-        "terminal.ansi.bright_green": "#0dbe4e",
+        "terminal.ansi.bright_green": "#86c427",
         "terminal.ansi.bright_yellow": "#ffca00",
         "terminal.ansi.bright_blue": "#009fff",
-        "terminal.ansi.bright_magenta": "#c635e4",
+        "terminal.ansi.bright_magenta": "#e130ac",
         "terminal.ansi.bright_cyan": "#08c0ef",
         "terminal.ansi.bright_white": "#bcbcbc",
         "players": [
@@ -1660,13 +1678,13 @@
             "color": "#8cda94"
           },
           "string.escape": {
-            "color": "#96d9f6"
+            "color": "#8fe0d0"
           },
           "string.regex": {
             "color": "#92dde4"
           },
           "string.special": {
-            "color": "#96d9f6"
+            "color": "#8fe0d0"
           },
           "string.special.symbol": {
             "color": "#ffde80"
@@ -1714,7 +1732,7 @@
             "color": "#ffba82"
           },
           "variable.builtin": {
-            "color": "#ffd452"
+            "color": "#ffbc56"
           },
           "variable.member": {
             "color": "#ffba82"
@@ -1723,7 +1741,7 @@
             "color": "#8a8a8a"
           },
           "variable.special": {
-            "color": "#ffd452"
+            "color": "#ffbc56"
           },
           "property": {
             "color": "#ffba82"
@@ -1750,10 +1768,10 @@
             "color": "#96d9f6"
           },
           "tag.css": {
-            "color": "#ff9187"
+            "color": "#ffa685"
           },
           "tag_name": {
-            "color": "#ff9187"
+            "color": "#ffa685"
           },
           "class": {
             "color": "#8eddb2"
@@ -1813,13 +1831,13 @@
             "color": "#ff91a8"
           },
           "variable.language": {
-            "color": "#ffd452"
+            "color": "#ffbc56"
           },
           "this": {
-            "color": "#ffd452"
+            "color": "#ffbc56"
           },
           "self": {
-            "color": "#ffd452"
+            "color": "#ffbc56"
           },
           "type.class": {
             "color": "#e290f0"
@@ -1849,7 +1867,7 @@
             "color": "#8cda94"
           },
           "tag.jsx": {
-            "color": "#ff9187"
+            "color": "#ffa685"
           },
           "tag.component": {
             "color": "#e290f0"
@@ -1873,16 +1891,22 @@
             "color": "#68cdf2"
           },
           "tag": {
-            "color": "#ff9187"
+            "color": "#ffa685"
           },
           "attribute": {
             "color": "#8eddb2"
           },
           "label": {
-            "color": "#ffd452"
+            "color": "#ffbc56"
           },
           "namespace": {
-            "color": "#ffd452"
+            "color": "#ffbc56"
+          },
+          "decorator": {
+            "color": "#97c4ff"
+          },
+          "attribute.builtin": {
+            "color": "#97c4ff"
           },
           "embedded": {
             "color": "#d4d4d4"
@@ -1894,7 +1918,7 @@
             "color": "#8cda94"
           },
           "markup.heading": {
-            "color": "#ff9187",
+            "color": "#ffa685",
             "font_weight": 700
           },
           "markup.bold": {
@@ -1919,13 +1943,13 @@
             "font_style": "italic"
           },
           "markup.list": {
-            "color": "#ff9187"
+            "color": "#ffa685"
           },
           "markup.list.numbered": {
-            "color": "#ff9187"
+            "color": "#ffa685"
           },
           "markup.list.unnumbered": {
-            "color": "#ff9187"
+            "color": "#ffa685"
           },
           "markup.raw": {
             "color": "#8cda94"
@@ -1961,7 +1985,7 @@
             "color": "#69b1ff"
           },
           "title": {
-            "color": "#ff9187",
+            "color": "#ffa685",
             "font_weight": 700
           },
           "predictive": {
