@@ -23,6 +23,29 @@ const gray = {
   "1040":"#070707"
 };
 
+const neutral = {
+  "020":"#fafafa",
+  "040":"#f7f7f7",
+  "060":"#f5f5f5",
+  "080":"#ededed",
+  "100":"#e5e5e5",
+  "200":"#d4d4d4",
+  "300":"#bcbcbc",
+  "400":"#a3a3a3",
+  "500":"#8a8a8a",
+  "600":"#737373",
+  "700":"#636363",
+  "800":"#525252",
+  "900":"#404040",
+  "920":"#363636",
+  "940":"#2c2c2c",
+  "960":"#262626",
+  "980":"#1d1d1d",
+  "1000":"#171717",
+  "1020":"#101010",
+  "1040":"#0a0a0a"
+};
+
 const red = {
   "050":"#ffedea",
   "100":"#ffdbd6",
@@ -35,6 +58,20 @@ const red = {
   "800":"#862425",
   "900":"#611e1d",
   "950":"#3e1715"
+};
+
+const vermillion = {
+  "050":"#fff0ea",
+  "100":"#ffe2d6",
+  "200":"#ffc4ad",
+  "300":"#ffa685",
+  "400":"#ff855e",
+  "500":"#ff5d36",
+  "600":"#d5512f",
+  "700":"#ad4529",
+  "800":"#863822",
+  "900":"#612b1b",
+  "950":"#3e1e14"
 };
 
 const orange = {
@@ -51,6 +88,20 @@ const orange = {
   "950":"#3d2513"
 };
 
+const amber = {
+  "050": "#fff6ea",
+  "100": "#ffeed5",
+  "200": "#ffddab",
+  "300": "#ffcc81",
+  "400": "#ffbc56",
+  "500": "#ffab16",
+  "600": "#d5901c",
+  "700": "#ac741d",
+  "800": "#855b1b",
+  "900": "#604218",
+  "950": "#3d2b13"
+};
+
 const yellow = {
   "050": "#fff9ea",
   "100": "#fff4d5",
@@ -65,6 +116,20 @@ const yellow = {
   "950": "#3d3112"
 };
 
+const lime = {
+  "050": "#f6f9ec",
+  "100": "#edf4d8",
+  "200": "#dae8b1",
+  "300": "#c6dc8a",
+  "400": "#afd062",
+  "500": "#86c427",
+  "600": "#77a42a",
+  "700": "#658527",
+  "800": "#516723",
+  "900": "#3e4b1d",
+  "950": "#2a3016"
+};
+
 const green = {
   "050": "#edf9ed",
   "100": "#daf3db",
@@ -77,6 +142,20 @@ const green = {
   "800": "#1d642e",
   "900": "#1b4923",
   "950": "#162f19"
+};
+
+const jade = {
+  "050": "#edfaf2",
+  "100": "#dbf4e5",
+  "200": "#b6e9cb",
+  "300": "#8eddb2",
+  "400": "#60d199",
+  "500": "#07c480",
+  "600": "#18a46c",
+  "700": "#1d8558",
+  "800": "#1e6746",
+  "900": "#1c4b34",
+  "950": "#163023"
 };
 
 const mint = {
@@ -149,6 +228,20 @@ const indigo = {
   "950": "#24173a"
 };
 
+const violet = {
+  "050": "#f8edfe",
+  "100": "#f1dafd",
+  "200": "#e1b5fa",
+  "300": "#ce90f7",
+  "400": "#b969f3",
+  "500": "#a13cee",
+  "600": "#8836c7",
+  "700": "#6f2ea1",
+  "800": "#58287c",
+  "900": "#412059",
+  "950": "#2b1738"
+};
+
 const purple = {
   "050": "#fbedfd",
   "100": "#f7dbfb",
@@ -161,6 +254,20 @@ const purple = {
   "800": "#692677",
   "900": "#4d1f56",
   "950": "#321736"
+};
+
+const magenta = {
+  "050": "#fdedf7",
+  "100": "#fbdbee",
+  "200": "#f7b7dd",
+  "300": "#f191cc",
+  "400": "#ea68bc",
+  "500": "#e130ac",
+  "600": "#bd2e90",
+  "700": "#992a75",
+  "800": "#77255b",
+  "900": "#561f43",
+  "950": "#38172b"
 };
 
 const pink = {
@@ -177,6 +284,20 @@ const pink = {
   "950": "#3d1720"
 };
 
+const rose = {
+  "050": "#ffeded",
+  "100": "#ffdbdc",
+  "200": "#ffb7b9",
+  "300": "#ff9198",
+  "400": "#ff6778",
+  "500": "#fe2d59",
+  "600": "#d42b4c",
+  "700": "#ac293f",
+  "800": "#852432",
+  "900": "#601e26",
+  "950": "#3e171b"
+};
+
 const brown = {
   "050": "#f8f2ee",
   "100": "#f1e4dd",
@@ -189,6 +310,14 @@ const brown = {
   "800": "#5f4534",
   "900": "#453327",
   "950": "#2d221b"
+};
+
+export const palettes = {
+  gray, neutral,
+  red, vermillion, orange, amber, yellow, lime,
+  green, jade, mint, teal, cyan, blue,
+  indigo, violet, purple, magenta, pink, rose,
+  brown
 };
 
 export type Roles = {
@@ -228,24 +357,101 @@ export type Roles = {
 export const light: Roles = {
   bg: {
     editor: "#ffffff",
-    window: gray["060"],
-    inset: gray["080"],
-    elevated: gray["040"]
+    window: neutral["060"],
+    inset: neutral["080"],
+    elevated: neutral["040"]
   },
   fg: {
-    base: gray["1040"],
-    fg1: gray["900"],
-    fg2: gray["800"],
-    fg3: gray["600"],
-    fg4: gray["500"]
+    base: neutral["1040"],
+    fg1: neutral["900"],
+    fg2: neutral["800"],
+    fg3: neutral["600"],
+    fg4: neutral["500"]
   },
   border: {
-    window: gray["100"],
-    editor: gray["200"],
-    indentGuide: gray["100"],
-    indentGuideActive: gray["200"],
-    inset: gray["200"],
-    elevated: gray["100"]
+    window: neutral["100"],
+    editor: neutral["200"],
+    indentGuide: neutral["100"],
+    indentGuideActive: neutral["200"],
+    inset: neutral["200"],
+    elevated: neutral["100"]
+  },
+  accent: {
+    primary: blue["500"],
+    link: blue["500"],
+    subtle: blue["100"],
+    contrastOnAccent: "#ffffff"
+  },
+  states: {
+    merge: indigo["600"],
+    success: jade["600"],
+    danger: red["600"],
+    warn: yellow["600"],
+    info: cyan["600"]
+  },
+  syntax: {
+    comment: neutral["600"],
+    string: green["600"],
+    number: cyan["600"],
+    keyword: pink["600"],
+    regexp: teal["600"],
+    func: indigo["600"],
+    type: purple["600"],
+    variable: orange["600"],
+    // Extended token types
+    operator: cyan["500"],
+    punctuation: neutral["700"],
+    constant: yellow["600"],
+    parameter: neutral["700"],
+    namespace: yellow["600"],
+    decorator: blue["600"],
+    escape: cyan["600"],
+    invalid: neutral["1040"],
+    tag: red["600"],
+    attribute: jade["600"]
+  },
+  ansi: {
+    black: neutral["980"],
+    red: red["600"],
+    green: jade["600"],
+    yellow: yellow["600"],
+    blue: blue["600"],
+    magenta: purple["600"],
+    cyan: cyan["600"],
+    white: neutral["300"],
+    // make bright colors match the non-bright counterparts
+    brightBlack: neutral["980"],
+    brightRed: red["600"],
+    brightGreen: jade["600"],
+    brightYellow: yellow["600"],
+    brightBlue: blue["600"],
+    brightMagenta: purple["600"],
+    brightCyan: cyan["600"],
+    brightWhite: neutral["300"]
+  }
+};
+
+export const lightSoft: Roles = {
+  bg: {
+    editor: "#ffffff",
+    window: neutral["040"],
+    inset: neutral["060"],
+    elevated: neutral["020"]
+  },
+  fg: {
+    base: neutral["800"],
+    fg1: neutral["700"],
+    fg2: neutral["600"],
+    fg3: neutral["500"],
+    fg4: neutral["400"]
+  },
+  border: {
+    window: neutral["080"],
+    editor: neutral["100"],
+    indentGuide: neutral["080"],
+    indentGuideActive: neutral["100"],
+    inset: neutral["200"],
+    elevated: neutral["100"]
   },
   accent: {
     primary: blue["500"],
@@ -255,90 +461,89 @@ export const light: Roles = {
   },
   states: {
     merge: indigo["500"],
-    success: mint["500"],
+    success: jade["500"],
     danger: red["500"],
     warn: yellow["500"],
     info: cyan["500"]
   },
   syntax: {
-    comment: gray["600"],
-    string: green["600"],
-    number: cyan["600"],
-    keyword: pink["500"],
-    regexp: teal["600"],
-    func: indigo["500"],
-    type: purple["500"],
-    variable: orange["600"],
+    comment: neutral["500"],
+    string: green["500"],
+    number: cyan["500"],
+    keyword: pink["400"],
+    regexp: teal["500"],
+    func: indigo["400"],
+    type: purple["400"],
+    variable: orange["500"],
     // Extended token types
-    operator: cyan["500"],
-    punctuation: gray["700"],
-    constant: yellow["600"],
-    parameter: gray["700"],
-    namespace: yellow["600"],
-    decorator: blue["500"],
-    escape: cyan["600"],
-    invalid: gray["1040"],
-    tag: red["600"],
-    attribute: mint["600"]
+    operator: cyan["400"],
+    punctuation: neutral["600"],
+    constant: yellow["500"],
+    parameter: neutral["600"],
+    namespace: yellow["500"],
+    decorator: blue["400"],
+    escape: cyan["500"],
+    invalid: neutral["1000"],
+    tag: red["500"],
+    attribute: jade["500"]
   },
   ansi: {
-    black: gray["980"],
+    black: neutral["980"],
     red: red["500"],
     green: green["500"],
     yellow: yellow["500"],
     blue: blue["500"],
     magenta: purple["500"],
     cyan: cyan["500"],
-    white: gray["300"],
-    // make bright colors match the non-bright counterparts
-    brightBlack: gray["980"],
+    white: neutral["300"],
+    brightBlack: neutral["980"],
     brightRed: red["500"],
     brightGreen: green["500"],
     brightYellow: yellow["500"],
     brightBlue: blue["500"],
     brightMagenta: purple["500"],
     brightCyan: cyan["500"],
-    brightWhite: gray["300"]
+    brightWhite: neutral["300"]
   }
 };
 
 export const dark: Roles = {
   bg: {
-    editor: gray["1040"],
-    window: gray["1000"],
-    inset: gray["980"],
-    elevated: gray["1020"]
+    editor: neutral["1040"],
+    window: neutral["1000"],
+    inset: neutral["980"],
+    elevated: neutral["1020"]
   },
   fg: {
-    base: gray["020"],
-    fg1: gray["200"],
-    fg2: gray["400"],
-    fg3: gray["600"],
-    fg4: gray["700"]
+    base: neutral["020"],
+    fg1: neutral["200"],
+    fg2: neutral["400"],
+    fg3: neutral["600"],
+    fg4: neutral["700"]
   },
   border: {
-    window: gray["1040"],
-    editor: gray["980"],
-    indentGuide: gray["980"],
-    indentGuideActive: gray["960"],
-    inset: gray["980"],
-    elevated: gray["980"]
+    window: neutral["1040"],
+    editor: neutral["980"],
+    indentGuide: neutral["980"],
+    indentGuideActive: neutral["960"],
+    inset: neutral["980"],
+    elevated: neutral["980"]
   },
   accent: {
     primary: blue["500"],
     link: blue["500"],
     subtle: blue["950"],
-    contrastOnAccent: gray["1040"]
+    contrastOnAccent: neutral["1040"]
   },
   states: {
     merge: indigo["500"],
-    success: mint["500"],
+    success: jade["500"],
     danger: red["500"],
     warn: yellow["500"],
     info: cyan["500"]
   },
   syntax: {
-    comment: gray["600"],
+    comment: neutral["600"],
     string: green["400"],
     number: cyan["400"],
     keyword: pink["400"],
@@ -348,32 +553,108 @@ export const dark: Roles = {
     variable: orange["400"],
     // Extended token types
     operator: cyan["500"],
-    punctuation: gray["700"],
+    punctuation: neutral["700"],
     constant: yellow["400"],
-    parameter: gray["400"],
+    parameter: neutral["400"],
     namespace: yellow["500"],
     decorator: blue["400"],
     escape: cyan["400"],
-    invalid: gray["020"],
+    invalid: neutral["020"],
     tag: red["400"],
-    attribute: mint["400"]
+    attribute: jade["400"]
   },
   ansi: {
-    black: gray["1000"],
+    black: neutral["1000"],
     red: red["500"],
     green: green["500"],
     yellow: yellow["500"],
     blue: blue["500"],
     magenta: purple["500"],
     cyan: cyan["500"],
-    white: gray["300"],
-    brightBlack: gray["1000"],
+    white: neutral["300"],
+    brightBlack: neutral["1000"],
     brightRed: red["500"],
     brightGreen: green["500"],
     brightYellow: yellow["500"],
     brightBlue: blue["500"],
     brightMagenta: purple["500"],
     brightCyan: cyan["500"],
-    brightWhite: gray["300"]
+    brightWhite: neutral["300"]
+  }
+};
+
+export const darkSoft: Roles = {
+  bg: {
+    editor: neutral["1000"],
+    window: neutral["1020"],
+    inset: neutral["960"],
+    elevated: neutral["980"]
+  },
+  fg: {
+    base: neutral["200"],
+    fg1: neutral["300"],
+    fg2: neutral["500"],
+    fg3: neutral["700"],
+    fg4: neutral["800"]
+  },
+  border: {
+    window: neutral["980"],
+    editor: neutral["940"],
+    indentGuide: neutral["960"],
+    indentGuideActive: neutral["940"],
+    inset: neutral["940"],
+    elevated: neutral["960"]
+  },
+  accent: {
+    primary: blue["400"],
+    link: blue["400"],
+    subtle: blue["900"],
+    contrastOnAccent: neutral["1000"]
+  },
+  states: {
+    merge: indigo["400"],
+    success: jade["400"],
+    danger: red["400"],
+    warn: yellow["400"],
+    info: cyan["400"]
+  },
+  syntax: {
+    comment: neutral["700"],
+    string: green["300"],
+    number: cyan["300"],
+    keyword: pink["300"],
+    regexp: teal["300"],
+    func: indigo["300"],
+    type: purple["300"],
+    variable: orange["300"],
+    // Extended token types
+    operator: cyan["400"],
+    punctuation: neutral["600"],
+    constant: yellow["300"],
+    parameter: neutral["500"],
+    namespace: yellow["400"],
+    decorator: blue["300"],
+    escape: cyan["300"],
+    invalid: neutral["200"],
+    tag: red["300"],
+    attribute: jade["300"]
+  },
+  ansi: {
+    black: neutral["1000"],
+    red: red["500"],
+    green: green["500"],
+    yellow: yellow["500"],
+    blue: blue["500"],
+    magenta: purple["500"],
+    cyan: cyan["500"],
+    white: neutral["300"],
+    brightBlack: neutral["1000"],
+    brightRed: red["500"],
+    brightGreen: green["500"],
+    brightYellow: yellow["500"],
+    brightBlue: blue["500"],
+    brightMagenta: purple["500"],
+    brightCyan: cyan["500"],
+    brightWhite: neutral["300"]
   }
 };

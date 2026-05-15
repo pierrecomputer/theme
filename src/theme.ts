@@ -109,6 +109,25 @@ export function makeTheme(name: string, kind: "light"|"dark", c: Roles): VSCodeT
       "textLink.foreground": c.accent.link,
       "textLink.activeForeground": c.accent.primary,
 
+      // Notifications
+      "notifications.background": c.bg.elevated,
+      "notifications.foreground": c.fg.base,
+      "notifications.border": c.border.elevated,
+      "notificationToast.border": c.border.elevated,
+      "notificationCenter.border": c.border.elevated,
+      "notificationCenterHeader.background": c.bg.elevated,
+      "notificationCenterHeader.foreground": c.fg.fg2,
+      "notificationLink.foreground": c.accent.link,
+      "notificationsErrorIcon.foreground": c.states.danger,
+      "notificationsWarningIcon.foreground": c.states.warn,
+      "notificationsInfoIcon.foreground": c.states.info,
+
+      // Quick input / command palette / file picker
+      "quickInput.background": c.bg.elevated,
+      "quickInput.foreground": c.fg.base,
+      "quickInputTitle.background": c.bg.elevated,
+      "widget.border": c.border.elevated,
+
       // Git colors
       "gitDecoration.addedResourceForeground": c.states.success,
       "gitDecoration.conflictingResourceForeground": c.states.warn,
