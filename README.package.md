@@ -29,6 +29,6 @@ Also available for [Zed](https://zed.dev/extensions?query=pierre) and as an [npm
 
 Pierre Dark Soft and Pierre Light Soft.
 
-<img width="3468" height="2496" alt="pierre-dark-soft" src="https://github.com/user-attachments/assets/6bb6498d-a9a0-42e9-8b14-f9cbaba0317e" />
+<img alt="pierre-dark-soft" src="https://github.com/user-attachments/assets/6bb6498d-a9a0-42e9-8b14-f9cbaba0317e" />
 
-<img width="3468" height="2496" alt="pierre-light-soft" src="https://github.com/user-attachments/assets/fd4ea6e7-8a00-4a17-922a-b7437543ffa3" />
+<img alt="pierre-light-soft" src="https://github.com/user-attachments/assets/fd4ea6e7-8a00-4a17-922a-b7437543ffa3" />
