@@ -1,6 +1,6 @@
 // src/build.ts
 import { writeFileSync, mkdirSync } from "node:fs";
-import { light as rolesLight, dark as rolesDark } from "./palette";
+import { light as rolesLight, lightSoft as rolesLightSoft, dark as rolesDark, darkSoft as rolesDarkSoft } from "./palette";
 import { makeTheme } from "./theme";
 import { makeZedThemeFamily } from "./zed-theme";
 import { convertRolesToP3 } from "./color-p3";
@@ -17,7 +17,9 @@ const rolesDarkP3 = convertRolesToP3(rolesDark);
 // ============================================
 const vscodeThemes = [
   { file: "themes/pierre-light.json", theme: makeTheme("Pierre Light", "light", rolesLight) },
+  { file: "themes/pierre-light-soft.json", theme: makeTheme("Pierre Light Soft", "light", rolesLightSoft) },
   { file: "themes/pierre-dark.json",  theme: makeTheme("Pierre Dark",  "dark",  rolesDark)  },
+  { file: "themes/pierre-dark-soft.json",  theme: makeTheme("Pierre Dark Soft",  "dark",  rolesDarkSoft)  },
   { file: "themes/pierre-light-vibrant.json", theme: makeTheme("Pierre Light Vibrant", "light", rolesLightP3) },
   { file: "themes/pierre-dark-vibrant.json",  theme: makeTheme("Pierre Dark Vibrant",  "dark",  rolesDarkP3)  }
 ];
@@ -32,7 +34,9 @@ for (const {file, theme} of vscodeThemes) {
 // ============================================
 const zedTheme = makeZedThemeFamily("Pierre", "pierrecomputer", [
   { name: "Pierre Light", appearance: "light", roles: rolesLight },
+  { name: "Pierre Light Soft", appearance: "light", roles: rolesLightSoft },
   { name: "Pierre Dark", appearance: "dark", roles: rolesDark },
+  { name: "Pierre Dark Soft", appearance: "dark", roles: rolesDarkSoft },
 ]);
 
 writeFileSync("zed/themes/pierre.json", JSON.stringify(zedTheme, null, 2), "utf8");
