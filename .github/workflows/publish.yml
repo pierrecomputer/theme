@@ -28,6 +28,9 @@ jobs:
       - name: Rename package for extension publishing
         run: jq '.name = "pierre-theme"' package.json > tmp.json && mv tmp.json package.json
 
+      - name: Swap in VSCE README
+        run: cp README.package.md README.md
+
       - name: Publish to VS Marketplace
         env:
           VSCE_PAT: ${{ secrets.VSCE_PAT }}

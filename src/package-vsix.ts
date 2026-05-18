@@ -5,7 +5,7 @@ import { join } from "path";
 const root = join(__dirname, "..");
 const pkgPath = join(root, "package.json");
 const readmePath = join(root, "README.md");
-const vsceReadmePath = join(root, "README.vsce.md");
+const vsceReadmePath = join(root, "README.package.md");
 const readmeBackupPath = join(root, "README.md.bak");
 
 const original = readFileSync(pkgPath, "utf-8");
@@ -22,7 +22,7 @@ const hadReadme = existsSync(readmePath);
 try {
   writeFileSync(pkgPath, JSON.stringify(pkg, null, 2) + "\n");
 
-  // Swap in the VSCE-specific README
+  // Swap in the package README
   if (hadReadme) renameSync(readmePath, readmeBackupPath);
   renameSync(vsceReadmePath, readmePath);
 
