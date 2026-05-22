@@ -11,17 +11,19 @@ A clean light and dark theme for Visual Studio Code and Cursor, built for [Diffs
 
 ## Variants
 
-| Variant | Description |
-|---|---|
-| Pierre Light | Light theme |
-| Pierre Dark | Dark theme |
+- Pierre Light
+- Pierre Dark
+- Pierre Light Soft
+- Pierre Dark Soft
+- **For web-use only:**
+  - Pierre Light Vibrant
+  - Pierre Dark Vibrant
 
 ## Links
 
 - [GitHub](https://github.com/pierrecomputer/theme)
 - [Diffs.com](https://diffs.com)
 - [pierre.computer](https://pierre.computer)
-
 
 Also available for [Zed](https://zed.dev/extensions?query=pierre) and as an [npm package](https://www.npmjs.com/package/@pierre/theme) for use with [Shiki](https://shiki.style/).
 
