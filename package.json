@@ -67,6 +67,7 @@
     "publish:ovsx": "tsx src/publish-ovsx.ts"
   },
   "devDependencies": {
+    "@types/node": "^25.9.1",
     "@vscode/vsce": "^3.2.2",
     "tsx": "^4.19.4",
     "typescript": "^6.0.3"
