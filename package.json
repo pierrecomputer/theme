@@ -9,6 +9,8 @@
     "color": "#141415",
     "theme": "dark"
   },
+  "author": "Pierre Computer <support@pierre.co>",
+  "homepage": "https://github.com/pierrecomputer/theme",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -54,18 +56,21 @@
     ]
   },
   "scripts": {
-    "build": "ts-node src/build.ts",
-    "preview": "ts-node src/palette-preview.ts",
-    "test": "npm run build && ts-node src/test.ts",
-    "start": "nodemon --watch src --ext ts --exec npm run build",
-    "package": "ts-node src/package-vsix.ts",
-    "prepublishOnly": "npm run build"
+    "build": "tsx src/build.ts",
+    "preview": "tsx src/palette-preview.ts",
+    "test": "npm run build && tsx src/test.ts",
+    "start": "tsx watch src/build.ts",
+    "package": "tsx src/package-vsix.ts",
+    "prepublishOnly": "npm run build",
+    "publish:npm": "npm publish --access public",
+    "publish:vsce": "tsx src/publish-vsce.ts",
+    "publish:ovsx": "tsx src/publish-ovsx.ts"
   },
   "devDependencies": {
+    "@types/node": "^25.9.1",
     "@vscode/vsce": "^3.2.2",
-    "nodemon": "^3.1.11",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.3"
+    "tsx": "^4.19.4",
+    "typescript": "^6.0.3"
   },
   "sideEffects": false,
   "files": [
