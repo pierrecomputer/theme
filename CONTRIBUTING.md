@@ -69,6 +69,17 @@ To override this (or any other) theme in your personal config file, please follo
 | `npm test` | Runs validation tests on the theme (includes build) |
 | `npm run package` | Compiles the theme `.vsix` file at the project root |
 | `npm start` | Automatically runs build on file change |
+| `npm run publish:npm` | Publishes the package to npm |
+| `npm run publish:vsce` | Publishes to the VS Marketplace (requires `VSCE_PAT`) |
+| `npm run publish:ovsx` | Publishes to Open VSX (requires `OVSX_TOKEN`) |
+
+## Publishing
+
+- [ ] Bump version in `package.json`
+- [ ] Run `npm run build`
+- [ ] **npm** — `npm run publish:npm`
+- [ ] **VS Marketplace** — `npm run publish:vsce -- <token>`
+- [ ] **Open VSX** — `npm run publish:ovsx -- <token>`
 
 ## Credit
 
