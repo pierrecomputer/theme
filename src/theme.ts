@@ -3,15 +3,24 @@ import type { Roles } from "./palette";
 
 type VSCodeTheme = {
   name: string;
+  displayName: string;
   type: "light" | "dark";
   colors: Record<string, string>;
   tokenColors: any[];
   semanticTokenColors: Record<string,string|{foreground:string;fontStyle?:string}>;
 };
 
-export function makeTheme(name: string, kind: "light"|"dark", c: Roles): VSCodeTheme {
+type MakeThemeOptions = {
+  name: string;
+  displayName: string;
+  type: "light" | "dark";
+  roles: Roles;
+};
+
+export function makeTheme({ name, displayName, type: kind, roles: c }: MakeThemeOptions): VSCodeTheme {
   return {
     name,
+    displayName,
     type: kind,
     colors: {
       // Core editor & text

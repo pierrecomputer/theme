@@ -1,5 +1,6 @@
 {
-  "name": "Pierre Light Soft",
+  "name": "pierre-light-soft",
+  "displayName": "Pierre Light Soft",
   "type": "light",
   "colors": {
     "editor.background": "#ffffff",
