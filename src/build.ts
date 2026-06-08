@@ -16,12 +16,60 @@ const rolesDarkP3 = convertRolesToP3(rolesDark);
 // VS Code Themes
 // ============================================
 const vscodeThemes = [
-  { file: "themes/pierre-light.json", theme: makeTheme("Pierre Light", "light", rolesLight) },
-  { file: "themes/pierre-light-soft.json", theme: makeTheme("Pierre Light Soft", "light", rolesLightSoft) },
-  { file: "themes/pierre-dark.json",  theme: makeTheme("Pierre Dark",  "dark",  rolesDark)  },
-  { file: "themes/pierre-dark-soft.json",  theme: makeTheme("Pierre Dark Soft",  "dark",  rolesDarkSoft)  },
-  { file: "themes/pierre-light-vibrant.json", theme: makeTheme("Pierre Light Vibrant", "light", rolesLightP3) },
-  { file: "themes/pierre-dark-vibrant.json",  theme: makeTheme("Pierre Dark Vibrant",  "dark",  rolesDarkP3)  }
+  {
+    file: "themes/pierre-light.json",
+    theme: makeTheme({
+      name: "pierre-light",
+      displayName: "Pierre Light",
+      type: "light",
+      roles: rolesLight
+    })
+  },
+  {
+    file: "themes/pierre-light-soft.json",
+    theme: makeTheme({
+      name: "pierre-light-soft",
+      displayName: "Pierre Light Soft",
+      type: "light",
+      roles: rolesLightSoft
+    })
+  },
+  {
+    file: "themes/pierre-dark.json",
+    theme: makeTheme({
+      name: "pierre-dark",
+      displayName: "Pierre Dark",
+      type: "dark",
+      roles: rolesDark
+    })
+  },
+  {
+    file: "themes/pierre-dark-soft.json",
+    theme: makeTheme({
+      name: "pierre-dark-soft",
+      displayName: "Pierre Dark Soft",
+      type: "dark",
+      roles: rolesDarkSoft
+    })
+  },
+  {
+    file: "themes/pierre-light-vibrant.json",
+    theme: makeTheme({
+      name: "pierre-light-vibrant",
+      displayName: "Pierre Light Vibrant",
+      type: "light",
+      roles: rolesLightP3
+    })
+  },
+  {
+    file: "themes/pierre-dark-vibrant.json",
+    theme: makeTheme({
+      name: "pierre-dark-vibrant",
+      displayName: "Pierre Dark Vibrant",
+      type: "dark",
+      roles: rolesDarkP3
+    })
+  }
 ];
 
 for (const {file, theme} of vscodeThemes) {
@@ -53,6 +101,7 @@ const themeNames: string[] = [];
 const themeDts = `/** VS Code / TextMate theme object (frozen at runtime). */
 interface PierreTheme {
   readonly name: string;
+  readonly displayName: string;
   readonly type: "light" | "dark";
   readonly colors: Readonly<Record<string, string>>;
   readonly tokenColors: ReadonlyArray<{

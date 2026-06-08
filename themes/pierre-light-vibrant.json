@@ -1,5 +1,6 @@
 {
-  "name": "Pierre Light Vibrant",
+  "name": "pierre-light-vibrant",
+  "displayName": "Pierre Light Vibrant",
   "type": "light",
   "colors": {
     "editor.background": "color(display-p3 1.000000 1.000000 1.000000)",

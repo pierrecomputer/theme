@@ -42,26 +42,46 @@ function collectColors(obj: any, path = ""): string[] {
   return issues;
 }
 
-function testThemeGeneration(themeName: string, themeType: "light" | "dark", roles: any) {
-  console.log(`\n🧪 Testing ${themeName}...`);
+function testThemeGeneration(
+  expectedName: string,
+  displayName: string,
+  themeType: "light" | "dark",
+  roles: any
+) {
+  console.log(`\n🧪 Testing ${displayName}...`);
   const errors: string[] = [];
 
   try {
-    const theme = makeTheme(themeName, themeType, roles);
+    const theme = makeTheme({
+      name: expectedName,
+      displayName,
+      type: themeType,
+      roles
+    });
+    const themeMetadata = theme as { name?: string; displayName?: string };
 
     // Test 1: Required properties exist
-    if (!theme.name) errors.push("Missing theme name");
+    if (!themeMetadata.name) errors.push("Missing theme name");
+    if (!themeMetadata.displayName) errors.push("Missing theme displayName");
     if (!theme.type) errors.push("Missing theme type");
     if (!theme.colors) errors.push("Missing colors object");
     if (!theme.tokenColors) errors.push("Missing tokenColors array");
     if (!theme.semanticTokenColors) errors.push("Missing semanticTokenColors object");
 
-    // Test 2: Type is correct
+    // Test 2: Theme metadata uses package-safe names plus display labels
+    if (themeMetadata.name !== expectedName) {
+      errors.push(`Expected name "${expectedName}" but got "${themeMetadata.name}"`);
+    }
+    if (themeMetadata.displayName !== displayName) {
+      errors.push(`Expected displayName "${displayName}" but got "${themeMetadata.displayName}"`);
+    }
+
+    // Test 3: Type is correct
     if (theme.type !== themeType) {
       errors.push(`Expected type "${themeType}" but got "${theme.type}"`);
     }
 
-    // Test 3: Critical editor colors exist
+    // Test 4: Critical editor colors exist
     const criticalColors = [
       "editor.background",
       "editor.foreground",
@@ -78,25 +98,25 @@ function testThemeGeneration(themeName: string, themeType: "light" | "dark", rol
       }
     }
 
-    // Test 4: Validate all color values
+    // Test 5: Validate all color values
     const colorIssues = collectColors(theme.colors);
     errors.push(...colorIssues);
 
-    // Test 5: Check for undefined/null values in colors
+    // Test 6: Check for undefined/null values in colors
     for (const [key, value] of Object.entries(theme.colors)) {
       if (value === undefined || value === null) {
         errors.push(`Color "${key}" is ${value}`);
       }
     }
 
-    // Test 6: TokenColors should be an array with entries
+    // Test 7: TokenColors should be an array with entries
     if (!Array.isArray(theme.tokenColors)) {
       errors.push("tokenColors is not an array");
     } else if (theme.tokenColors.length === 0) {
       errors.push("tokenColors array is empty");
     }
 
-    // Test 7: Validate tokenColors structure
+    // Test 8: Validate tokenColors structure
     theme.tokenColors.forEach((token, idx) => {
       if (!token.scope) {
         errors.push(`tokenColors[${idx}] missing scope`);
@@ -111,7 +131,7 @@ function testThemeGeneration(themeName: string, themeType: "light" | "dark", rol
       }
     });
 
-    // Test 8: Semantic tokens validation
+    // Test 9: Semantic tokens validation
     for (const [key, value] of Object.entries(theme.semanticTokenColors)) {
       if (typeof value === "string") {
         usedColors.add(value);
@@ -130,15 +150,15 @@ function testThemeGeneration(themeName: string, themeType: "light" | "dark", rol
     }
 
     if (errors.length === 0) {
-      console.log(`✅ ${themeName} passed all checks`);
+      console.log(`✅ ${displayName} passed all checks`);
       return true;
     } else {
-      console.error(`❌ ${themeName} failed with ${errors.length} error(s):`);
+      console.error(`❌ ${displayName} failed with ${errors.length} error(s):`);
       errors.forEach(err => console.error(`   - ${err}`));
       return false;
     }
   } catch (error) {
-    console.error(`❌ ${themeName} threw an error:`, error);
+    console.error(`❌ ${displayName} threw an error:`, error);
     return false;
   }
 }
@@ -148,13 +168,15 @@ function testGeneratedFiles() {
   const errors: string[] = [];
 
   const files = [
-    { path: "themes/pierre-light.json", expectedType: "light" },
-    { path: "themes/pierre-dark.json", expectedType: "dark" },
-    { path: "themes/pierre-light-vibrant.json", expectedType: "light" },
-    { path: "themes/pierre-dark-vibrant.json", expectedType: "dark" }
+    { path: "themes/pierre-light.json", expectedType: "light", expectedName: "pierre-light", expectedDisplayName: "Pierre Light" },
+    { path: "themes/pierre-light-soft.json", expectedType: "light", expectedName: "pierre-light-soft", expectedDisplayName: "Pierre Light Soft" },
+    { path: "themes/pierre-dark.json", expectedType: "dark", expectedName: "pierre-dark", expectedDisplayName: "Pierre Dark" },
+    { path: "themes/pierre-dark-soft.json", expectedType: "dark", expectedName: "pierre-dark-soft", expectedDisplayName: "Pierre Dark Soft" },
+    { path: "themes/pierre-light-vibrant.json", expectedType: "light", expectedName: "pierre-light-vibrant", expectedDisplayName: "Pierre Light Vibrant" },
+    { path: "themes/pierre-dark-vibrant.json", expectedType: "dark", expectedName: "pierre-dark-vibrant", expectedDisplayName: "Pierre Dark Vibrant" }
   ];
 
-  for (const { path, expectedType } of files) {
+  for (const { path, expectedType, expectedName, expectedDisplayName } of files) {
     // Test 1: File exists
     if (!existsSync(path)) {
       errors.push(`File does not exist: ${path}`);
@@ -173,6 +195,13 @@ function testGeneratedFiles() {
 
       // Test 3: Has required structure
       if (!theme.name) errors.push(`${path}: Missing name`);
+      if (!theme.displayName) errors.push(`${path}: Missing displayName`);
+      if (theme.name !== expectedName) {
+        errors.push(`${path}: Expected name "${expectedName}" but got "${theme.name}"`);
+      }
+      if (theme.displayName !== expectedDisplayName) {
+        errors.push(`${path}: Expected displayName "${expectedDisplayName}" but got "${theme.displayName}"`);
+      }
       if (!theme.type) errors.push(`${path}: Missing type`);
       if (theme.type !== expectedType) {
         errors.push(`${path}: Expected type "${expectedType}" but got "${theme.type}"`);
@@ -253,8 +282,8 @@ let allPassed = true;
 allPassed = testPaletteRoles() && allPassed;
 
 // Test theme generation
-allPassed = testThemeGeneration("Pierre Light", "light", rolesLight) && allPassed;
-allPassed = testThemeGeneration("Pierre Dark", "dark", rolesDark) && allPassed;
+allPassed = testThemeGeneration("pierre-light", "Pierre Light", "light", rolesLight) && allPassed;
+allPassed = testThemeGeneration("pierre-dark", "Pierre Dark", "dark", rolesDark) && allPassed;
 
 // Test generated files (only if they exist - they should after build)
 allPassed = testGeneratedFiles() && allPassed;

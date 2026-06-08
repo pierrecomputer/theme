@@ -1,5 +1,6 @@
 {
-  "name": "Pierre Dark Soft",
+  "name": "pierre-dark-soft",
+  "displayName": "Pierre Dark Soft",
   "type": "dark",
   "colors": {
     "editor.background": "#171717",

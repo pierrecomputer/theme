@@ -1,5 +1,6 @@
 {
-  "name": "Pierre Dark Vibrant",
+  "name": "pierre-dark-vibrant",
+  "displayName": "Pierre Dark Vibrant",
   "type": "dark",
   "colors": {
     "editor.background": "color(display-p3 0.039216 0.039216 0.039216)",

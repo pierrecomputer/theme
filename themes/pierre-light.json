@@ -1,5 +1,6 @@
 {
-  "name": "Pierre Light",
+  "name": "pierre-light",
+  "displayName": "Pierre Light",
   "type": "light",
   "colors": {
     "editor.background": "#ffffff",
