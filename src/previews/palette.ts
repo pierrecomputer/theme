@@ -1,10 +1,9 @@
-// src/palette-preview.ts
-// Generates preview/palette.html — a swatch sheet of every palette in palette.ts.
-import { writeFileSync, mkdirSync } from "node:fs";
-import { palettes } from "./palette";
+// Builds the palette swatch sheet (every scale in palettes.ts) and returns it as
+// HTML. Writing to disk is done by scripts/createPreviews.ts.
+import { palettes } from "../palettes";
 
-mkdirSync("preview", { recursive: true });
-
+/** Render the palette swatch sheet as a standalone HTML document. */
+function renderPaletteHtml(): string {
 const sections = Object.entries(palettes)
   .map(([name, scale]) => {
     // JS reorders integer-indexed keys ahead of string keys, which would move
@@ -146,5 +145,10 @@ ${sections}
 </html>
 `;
 
-writeFileSync("preview/palette.html", html, "utf8");
-console.log("Wrote preview/palette.html");
+  return html;
+}
+
+export const palette = {
+  filename: "palette.html",
+  render: renderPaletteHtml,
+};

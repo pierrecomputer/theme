@@ -91,22 +91,9 @@ const html = highlighter.codeToHtml(code, {
 
 ## Relevant files
 
-- **`src/color-p3.ts`** - Color conversion and enhancement
-- **`src/demo-p3.ts`** - Demo showing conversions (`npx ts-node src/demo-p3.ts`)
-- **`color-comparison.html`** - Visual comparison tool (open in Safari on P3 display)
-
-## Testing
-
-```bash
-# View color conversions
-npx ts-node src/demo-p3.ts
-
-# Rebuild themes
-npm run build
-
-# Run tests
-npm test
-```
+- **`src/color/p3.ts`** - Display-P3 conversion and gamut enhancement
+- **`src/color/`** - Shared color science (sRGB, contrast, CIEDE2000, CVD)
+- **`src/previews/p3.ts`** - Preview showing conversions (`npm run preview`)
 
 ## Why this matters
 

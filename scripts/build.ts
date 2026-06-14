@@ -1,9 +1,8 @@
-// src/build.ts
 import { writeFileSync, mkdirSync } from "node:fs";
-import { light as rolesLight, lightSoft as rolesLightSoft, dark as rolesDark, darkSoft as rolesDarkSoft } from "./palette";
-import { makeTheme } from "./theme";
-import { makeZedThemeFamily } from "./zed-theme";
-import { convertRolesToP3 } from "./color-p3";
+import { light as rolesLight, lightSoft as rolesLightSoft, dark as rolesDark, darkSoft as rolesDarkSoft } from "../src/roles";
+import { createTheme } from "../src/createTheme";
+import { createZedTheme } from "../src/createZedTheme";
+import { convertRolesToP3 } from "../src/color";
 
 mkdirSync("themes", { recursive: true });
 mkdirSync("zed/themes", { recursive: true });
@@ -18,7 +17,7 @@ const rolesDarkP3 = convertRolesToP3(rolesDark);
 const vscodeThemes = [
   {
     file: "themes/pierre-light.json",
-    theme: makeTheme({
+    theme: createTheme({
       name: "pierre-light",
       displayName: "Pierre Light",
       type: "light",
@@ -27,7 +26,7 @@ const vscodeThemes = [
   },
   {
     file: "themes/pierre-light-soft.json",
-    theme: makeTheme({
+    theme: createTheme({
       name: "pierre-light-soft",
       displayName: "Pierre Light Soft",
       type: "light",
@@ -36,7 +35,7 @@ const vscodeThemes = [
   },
   {
     file: "themes/pierre-dark.json",
-    theme: makeTheme({
+    theme: createTheme({
       name: "pierre-dark",
       displayName: "Pierre Dark",
       type: "dark",
@@ -45,7 +44,7 @@ const vscodeThemes = [
   },
   {
     file: "themes/pierre-dark-soft.json",
-    theme: makeTheme({
+    theme: createTheme({
       name: "pierre-dark-soft",
       displayName: "Pierre Dark Soft",
       type: "dark",
@@ -54,7 +53,7 @@ const vscodeThemes = [
   },
   {
     file: "themes/pierre-light-vibrant.json",
-    theme: makeTheme({
+    theme: createTheme({
       name: "pierre-light-vibrant",
       displayName: "Pierre Light Vibrant",
       type: "light",
@@ -63,7 +62,7 @@ const vscodeThemes = [
   },
   {
     file: "themes/pierre-dark-vibrant.json",
-    theme: makeTheme({
+    theme: createTheme({
       name: "pierre-dark-vibrant",
       displayName: "Pierre Dark Vibrant",
       type: "dark",
@@ -80,7 +79,7 @@ for (const {file, theme} of vscodeThemes) {
 // ============================================
 // Zed Theme Family
 // ============================================
-const zedTheme = makeZedThemeFamily("Pierre", "pierrecomputer", [
+const zedTheme = createZedTheme("Pierre", "pierrecomputer", [
   { name: "Pierre Light", appearance: "light", roles: rolesLight },
   { name: "Pierre Light Soft", appearance: "light", roles: rolesLightSoft },
   { name: "Pierre Dark", appearance: "dark", roles: rolesDark },

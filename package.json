@@ -54,11 +54,11 @@
     ]
   },
   "scripts": {
-    "build": "ts-node src/build.ts",
-    "preview": "ts-node src/palette-preview.ts",
-    "test": "npm run build && ts-node src/test.ts",
+    "build": "ts-node scripts/build.ts",
+    "preview": "ts-node scripts/createPreviews.ts",
+    "test": "npm run build && ts-node test/test.ts",
     "start": "nodemon --watch src --ext ts --exec npm run build",
-    "package": "ts-node src/package-vsix.ts",
+    "package": "ts-node scripts/buildVsCodePackage.ts",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {

@@ -1,5 +1,4 @@
-// src/theme.ts
-import type { Roles } from "./palette";
+import type { Roles } from "./roles";
 
 type VSCodeTheme = {
   name: string;
@@ -10,14 +9,14 @@ type VSCodeTheme = {
   semanticTokenColors: Record<string,string|{foreground:string;fontStyle?:string}>;
 };
 
-type MakeThemeOptions = {
+type CreateThemeOptions = {
   name: string;
   displayName: string;
   type: "light" | "dark";
   roles: Roles;
 };
 
-export function makeTheme({ name, displayName, type: kind, roles: c }: MakeThemeOptions): VSCodeTheme {
+export function createTheme({ name, displayName, type: kind, roles: c }: CreateThemeOptions): VSCodeTheme {
   return {
     name,
     displayName,

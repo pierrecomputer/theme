@@ -1,7 +1,7 @@
-// src/test.ts
+// test/test.ts
 import { readFileSync, existsSync } from "node:fs";
-import { light as rolesLight, dark as rolesDark } from "./palette";
-import { makeTheme } from "./theme";
+import { light as rolesLight, dark as rolesDark } from "../src/roles";
+import { createTheme } from "../src/createTheme";
 
 // Color tracking for detecting undefined values
 const usedColors = new Set<string>();
@@ -52,7 +52,7 @@ function testThemeGeneration(
   const errors: string[] = [];
 
   try {
-    const theme = makeTheme({
+    const theme = createTheme({
       name: expectedName,
       displayName,
       type: themeType,

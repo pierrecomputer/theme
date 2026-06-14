@@ -1,3 +1,10 @@
+// VS Code Marketplace packaging shim. The npm package is scoped as
+// @pierre/theme, but VSIX packaging expects the extension name to be unscoped
+// and reads README.md as the marketplace description. This script temporarily
+// swaps package.json's name to pierre-theme and this directory's
+// README.package.md to the repo-root README.md, runs `vsce package`, then
+// restores the working tree in a finally block.
+
 import { readFileSync, writeFileSync, existsSync, renameSync } from "fs";
 import { execSync } from "child_process";
 import { join } from "path";
@@ -5,7 +12,7 @@ import { join } from "path";
 const root = join(__dirname, "..");
 const pkgPath = join(root, "package.json");
 const readmePath = join(root, "README.md");
-const vsceReadmePath = join(root, "README.package.md");
+const vsceReadmePath = join(__dirname, "README.package.md");
 const readmeBackupPath = join(root, "README.md.bak");
 
 const original = readFileSync(pkgPath, "utf-8");

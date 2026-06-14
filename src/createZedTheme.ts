@@ -1,5 +1,4 @@
-// src/zed-theme.ts
-import type { Roles } from "./palette";
+import type { Roles } from "./roles";
 
 type ZedHighlightStyle = {
   color?: string;
@@ -196,13 +195,13 @@ type ZedThemeFamilyContent = {
   themes: ZedTheme[];
 };
 
-export type ZedThemeVariant = {
+type ZedThemeVariant = {
   name: string;
   appearance: "light" | "dark";
   roles: Roles;
 };
 
-export function makeZedThemeFamily(
+export function createZedTheme(
   familyName: string,
   author: string,
   variants: ZedThemeVariant[]
