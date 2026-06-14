@@ -29,10 +29,20 @@ Usage:
   import pierreLight from '@pierre/theme/pierre-light'
 
   Available themes:
-   - @pierre/theme/pierre-dark
    - @pierre/theme/pierre-light
-   - @pierre/theme/pierre-dark-vibrant   (Display P3)
-   - @pierre/theme/pierre-light-vibrant  (Display P3)
+   - @pierre/theme/pierre-light-protanopia-deuteranopia  (CVD, red-green)
+   - @pierre/theme/pierre-light-tritanopia               (CVD, blue-yellow)
+   - @pierre/theme/pierre-light-vibrant                  (Display P3)
+   - @pierre/theme/pierre-dark
+   - @pierre/theme/pierre-dark-protanopia-deuteranopia   (CVD, red-green)
+   - @pierre/theme/pierre-dark-tritanopia                (CVD, blue-yellow)
+   - @pierre/theme/pierre-dark-vibrant                   (Display P3)
 
  Zed:
   Install "Pierre" from the Zed extension registry
+
+~~~
+
+Contributing:
+ - Development, build, and testing: [CONTRIBUTING.md](CONTRIBUTING.md)
+ - Accessibility (CVD themes): [ACCESSIBILITY.md](ACCESSIBILITY.md)

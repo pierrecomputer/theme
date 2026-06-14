@@ -56,19 +56,30 @@ To override this (or any other) theme in your personal config file, please follo
 2. Run `npm install` to install the dependencies.
 3. Press `F5` to open a new window with your extension loaded
 4. Open `Code > Preferences > Color Theme` [`⌘k ⌘t`] and pick the "Pierre…" theme you want to test.
-5. Make changes to the [`/src/theme.ts`](https://github.com/pierrecomputer/theme/blob/main/src/theme.ts) file.
-6. Run `npm run build` to update the theme. You can also run `npm run start` instead to automatically rebuild the theme while making changes and no reloading should be necessary.
-7. Run `npm test` to validate your changes (this runs automatically on PRs).
+5. Make changes under [`/src`](https://github.com/pierrecomputer/theme/blob/main/src). Theme construction lives in `src/createTheme.ts`; role values live in `src/roles`.
+6. Run `npm run build` to update the theme. You can also run `npm run dev` instead to automatically rebuild the themes and previews while making changes and no reloading should be necessary.
+7. Run `npm test` to validate your changes (this runs automatically on PRs); see
+   [Testing](#testing) below.
 8. Once you're happy, commit your changes and open a PR.
+
+## Testing
+
+`npm test` builds the themes, runs structural validation, and runs the CVD
+accessibility gate (the design it enforces is documented in
+[`ACCESSIBILITY.md`](ACCESSIBILITY.md)). The gate, in `test/`:g
+
+For visual proofing, `npm run preview` writes `preview/*.html`: the palette
+scales, the Display-P3 conversions, and a normal-vs-simulated CVD proof sheet.
 
 ## Scripts
 
 | Script | Description |
 | --- | --- |
 | `npm run build` | Builds the theme `.json` files in `./themes` directory |
-| `npm test` | Runs validation tests on the theme (includes build) |
-| `npm run package` | Compiles the theme `.vsix` file at the project root |
-| `npm start` | Automatically runs build on file change |
+| `npm test` | Runs validation tests + the CVD accessibility gate (includes build) |
+| `npm run preview` | Writes preview HTML files from `src/previews` into `preview/` |
+| `npm run package` | Temporarily applies the VSIX package name/README shim, then writes the `.vsix` file at the project root |
+| `npm run dev` | Rebuilds themes and previews on file change |
 
 ## Credit
 
