@@ -37,9 +37,19 @@
         "path": "./themes/pierre-light.json"
       },
       {
+        "label": "Pierre Light Protanopia & Deuteranopia",
+        "uiTheme": "vs",
+        "path": "./themes/pierre-light-protanopia-deuteranopia.json"
+      },
+      {
         "label": "Pierre Light Soft",
         "uiTheme": "vs",
         "path": "./themes/pierre-light-soft.json"
+      },
+      {
+        "label": "Pierre Light Tritanopia",
+        "uiTheme": "vs",
+        "path": "./themes/pierre-light-tritanopia.json"
       },
       {
         "label": "Pierre Dark",
@@ -47,9 +57,19 @@
         "path": "./themes/pierre-dark.json"
       },
       {
+        "label": "Pierre Dark Protanopia & Deuteranopia",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pierre-dark-protanopia-deuteranopia.json"
+      },
+      {
         "label": "Pierre Dark Soft",
         "uiTheme": "vs-dark",
         "path": "./themes/pierre-dark-soft.json"
+      },
+      {
+        "label": "Pierre Dark Tritanopia",
+        "uiTheme": "vs-dark",
+        "path": "./themes/pierre-dark-tritanopia.json"
       }
     ]
   },
@@ -62,7 +82,9 @@
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
+    "@types/culori": "^4.0.1",
     "@vscode/vsce": "^3.2.2",
+    "culori": "^4.0.2",
     "nodemon": "^3.1.11",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
@@ -79,29 +101,45 @@
       "types": "./dist/index.d.mts",
       "default": "./dist/index.mjs"
     },
-    "./pierre-dark": {
-      "types": "./dist/pierre-dark.d.mts",
-      "default": "./dist/pierre-dark.mjs"
-    },
-    "./pierre-dark-soft": {
-      "types": "./dist/pierre-dark-soft.d.mts",
-      "default": "./dist/pierre-dark-soft.mjs"
-    },
     "./pierre-light": {
       "types": "./dist/pierre-light.d.mts",
       "default": "./dist/pierre-light.mjs"
+    },
+    "./pierre-light-protanopia-deuteranopia": {
+      "types": "./dist/pierre-light-protanopia-deuteranopia.d.mts",
+      "default": "./dist/pierre-light-protanopia-deuteranopia.mjs"
     },
     "./pierre-light-soft": {
       "types": "./dist/pierre-light-soft.d.mts",
       "default": "./dist/pierre-light-soft.mjs"
     },
-    "./pierre-dark-vibrant": {
-      "types": "./dist/pierre-dark-vibrant.d.mts",
-      "default": "./dist/pierre-dark-vibrant.mjs"
+    "./pierre-light-tritanopia": {
+      "types": "./dist/pierre-light-tritanopia.d.mts",
+      "default": "./dist/pierre-light-tritanopia.mjs"
     },
     "./pierre-light-vibrant": {
       "types": "./dist/pierre-light-vibrant.d.mts",
       "default": "./dist/pierre-light-vibrant.mjs"
+    },
+    "./pierre-dark": {
+      "types": "./dist/pierre-dark.d.mts",
+      "default": "./dist/pierre-dark.mjs"
+    },
+    "./pierre-dark-protanopia-deuteranopia": {
+      "types": "./dist/pierre-dark-protanopia-deuteranopia.d.mts",
+      "default": "./dist/pierre-dark-protanopia-deuteranopia.mjs"
+    },
+    "./pierre-dark-soft": {
+      "types": "./dist/pierre-dark-soft.d.mts",
+      "default": "./dist/pierre-dark-soft.mjs"
+    },
+    "./pierre-dark-tritanopia": {
+      "types": "./dist/pierre-dark-tritanopia.d.mts",
+      "default": "./dist/pierre-dark-tritanopia.mjs"
+    },
+    "./pierre-dark-vibrant": {
+      "types": "./dist/pierre-dark-vibrant.d.mts",
+      "default": "./dist/pierre-dark-vibrant.mjs"
     },
     "./themes/*": "./themes/*"
   },

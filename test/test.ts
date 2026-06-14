@@ -1,7 +1,11 @@
 // test/test.ts
 import { readFileSync, existsSync } from "node:fs";
-import { light as rolesLight, dark as rolesDark } from "../src/roles";
+import {
+  light as rolesLight, dark as rolesDark,
+  protanDeutanLight, protanDeutanDark, tritanopiaLight, tritanopiaDark,
+} from "../src/roles";
 import { createTheme } from "../src/createTheme";
+import { runCvdGate } from "./cvd-test";
 
 // Color tracking for detecting undefined values
 const usedColors = new Set<string>();
@@ -169,10 +173,14 @@ function testGeneratedFiles() {
 
   const files = [
     { path: "themes/pierre-light.json", expectedType: "light", expectedName: "pierre-light", expectedDisplayName: "Pierre Light" },
+    { path: "themes/pierre-light-protanopia-deuteranopia.json", expectedType: "light", expectedName: "pierre-light-protanopia-deuteranopia", expectedDisplayName: "Pierre Light Protanopia & Deuteranopia" },
     { path: "themes/pierre-light-soft.json", expectedType: "light", expectedName: "pierre-light-soft", expectedDisplayName: "Pierre Light Soft" },
-    { path: "themes/pierre-dark.json", expectedType: "dark", expectedName: "pierre-dark", expectedDisplayName: "Pierre Dark" },
-    { path: "themes/pierre-dark-soft.json", expectedType: "dark", expectedName: "pierre-dark-soft", expectedDisplayName: "Pierre Dark Soft" },
+    { path: "themes/pierre-light-tritanopia.json", expectedType: "light", expectedName: "pierre-light-tritanopia", expectedDisplayName: "Pierre Light Tritanopia" },
     { path: "themes/pierre-light-vibrant.json", expectedType: "light", expectedName: "pierre-light-vibrant", expectedDisplayName: "Pierre Light Vibrant" },
+    { path: "themes/pierre-dark.json", expectedType: "dark", expectedName: "pierre-dark", expectedDisplayName: "Pierre Dark" },
+    { path: "themes/pierre-dark-protanopia-deuteranopia.json", expectedType: "dark", expectedName: "pierre-dark-protanopia-deuteranopia", expectedDisplayName: "Pierre Dark Protanopia & Deuteranopia" },
+    { path: "themes/pierre-dark-soft.json", expectedType: "dark", expectedName: "pierre-dark-soft", expectedDisplayName: "Pierre Dark Soft" },
+    { path: "themes/pierre-dark-tritanopia.json", expectedType: "dark", expectedName: "pierre-dark-tritanopia", expectedDisplayName: "Pierre Dark Tritanopia" },
     { path: "themes/pierre-dark-vibrant.json", expectedType: "dark", expectedName: "pierre-dark-vibrant", expectedDisplayName: "Pierre Dark Vibrant" }
   ];
 
@@ -260,7 +268,11 @@ function testPaletteRoles() {
   }
 
   validateRoles(rolesLight, "light");
+  validateRoles(protanDeutanLight, "protanDeutanLight");
+  validateRoles(tritanopiaLight, "tritanopiaLight");
   validateRoles(rolesDark, "dark");
+  validateRoles(protanDeutanDark, "protanDeutanDark");
+  validateRoles(tritanopiaDark, "tritanopiaDark");
 
   if (errors.length > 0) {
     console.error(`❌ Palette roles validation failed:`);
@@ -281,12 +293,21 @@ let allPassed = true;
 // Test palette roles first
 allPassed = testPaletteRoles() && allPassed;
 
-// Test theme generation
+// Test theme generation (light variants, then dark; CVD distinguishability is
+// handled by the gate below)
 allPassed = testThemeGeneration("pierre-light", "Pierre Light", "light", rolesLight) && allPassed;
+allPassed = testThemeGeneration("pierre-light-protanopia-deuteranopia", "Pierre Light Protanopia & Deuteranopia", "light", protanDeutanLight) && allPassed;
+allPassed = testThemeGeneration("pierre-light-tritanopia", "Pierre Light Tritanopia", "light", tritanopiaLight) && allPassed;
 allPassed = testThemeGeneration("pierre-dark", "Pierre Dark", "dark", rolesDark) && allPassed;
+allPassed = testThemeGeneration("pierre-dark-protanopia-deuteranopia", "Pierre Dark Protanopia & Deuteranopia", "dark", protanDeutanDark) && allPassed;
+allPassed = testThemeGeneration("pierre-dark-tritanopia", "Pierre Dark Tritanopia", "dark", tritanopiaDark) && allPassed;
 
 // Test generated files (only if they exist - they should after build)
 allPassed = testGeneratedFiles() && allPassed;
+
+// CVD objective gate (Machado-2009 simulation + WCAG contrast + CIEDE2000) —
+// hard gate: fails the build if any CVD theme regresses into ambiguity.
+allPassed = runCvdGate() && allPassed;
 
 // Summary
 console.log("\n" + "=".repeat(50));

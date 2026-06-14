@@ -1,5 +1,14 @@
 import { writeFileSync, mkdirSync } from "node:fs";
-import { light as rolesLight, lightSoft as rolesLightSoft, dark as rolesDark, darkSoft as rolesDarkSoft } from "../src/roles";
+import {
+  light as rolesLight,
+  lightSoft as rolesLightSoft,
+  dark as rolesDark,
+  darkSoft as rolesDarkSoft,
+  protanDeutanLight as rolesProtanDeutanLight,
+  protanDeutanDark as rolesProtanDeutanDark,
+  tritanopiaLight as rolesTritanopiaLight,
+  tritanopiaDark as rolesTritanopiaDark,
+} from "../src/roles";
 import { createTheme } from "../src/createTheme";
 import { createZedTheme } from "../src/createZedTheme";
 import { convertRolesToP3 } from "../src/color";
@@ -25,12 +34,39 @@ const vscodeThemes = [
     })
   },
   {
+    file: "themes/pierre-light-protanopia-deuteranopia.json",
+    theme: createTheme({
+      name: "pierre-light-protanopia-deuteranopia",
+      displayName: "Pierre Light Protanopia & Deuteranopia",
+      type: "light",
+      roles: rolesProtanDeutanLight
+    })
+  },
+  {
     file: "themes/pierre-light-soft.json",
     theme: createTheme({
       name: "pierre-light-soft",
       displayName: "Pierre Light Soft",
       type: "light",
       roles: rolesLightSoft
+    })
+  },
+  {
+    file: "themes/pierre-light-tritanopia.json",
+    theme: createTheme({
+      name: "pierre-light-tritanopia",
+      displayName: "Pierre Light Tritanopia",
+      type: "light",
+      roles: rolesTritanopiaLight
+    })
+  },
+  {
+    file: "themes/pierre-light-vibrant.json",
+    theme: createTheme({
+      name: "pierre-light-vibrant",
+      displayName: "Pierre Light Vibrant",
+      type: "light",
+      roles: rolesLightP3
     })
   },
   {
@@ -43,6 +79,15 @@ const vscodeThemes = [
     })
   },
   {
+    file: "themes/pierre-dark-protanopia-deuteranopia.json",
+    theme: createTheme({
+      name: "pierre-dark-protanopia-deuteranopia",
+      displayName: "Pierre Dark Protanopia & Deuteranopia",
+      type: "dark",
+      roles: rolesProtanDeutanDark
+    })
+  },
+  {
     file: "themes/pierre-dark-soft.json",
     theme: createTheme({
       name: "pierre-dark-soft",
@@ -52,12 +97,12 @@ const vscodeThemes = [
     })
   },
   {
-    file: "themes/pierre-light-vibrant.json",
+    file: "themes/pierre-dark-tritanopia.json",
     theme: createTheme({
-      name: "pierre-light-vibrant",
-      displayName: "Pierre Light Vibrant",
-      type: "light",
-      roles: rolesLightP3
+      name: "pierre-dark-tritanopia",
+      displayName: "Pierre Dark Tritanopia",
+      type: "dark",
+      roles: rolesTritanopiaDark
     })
   },
   {
@@ -81,9 +126,13 @@ for (const {file, theme} of vscodeThemes) {
 // ============================================
 const zedTheme = createZedTheme("Pierre", "pierrecomputer", [
   { name: "Pierre Light", appearance: "light", roles: rolesLight },
+  { name: "Pierre Light Protanopia & Deuteranopia", appearance: "light", roles: rolesProtanDeutanLight },
   { name: "Pierre Light Soft", appearance: "light", roles: rolesLightSoft },
+  { name: "Pierre Light Tritanopia", appearance: "light", roles: rolesTritanopiaLight },
   { name: "Pierre Dark", appearance: "dark", roles: rolesDark },
+  { name: "Pierre Dark Protanopia & Deuteranopia", appearance: "dark", roles: rolesProtanDeutanDark },
   { name: "Pierre Dark Soft", appearance: "dark", roles: rolesDarkSoft },
+  { name: "Pierre Dark Tritanopia", appearance: "dark", roles: rolesTritanopiaDark },
 ]);
 
 writeFileSync("zed/themes/pierre.json", JSON.stringify(zedTheme, null, 2), "utf8");

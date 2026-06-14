@@ -34,19 +34,37 @@ jobs:
 
       - name: Verify theme files exist
         run: |
-          if [ ! -f "themes/pierre-light.json" ]; then
-            echo "❌ pierre-light.json not generated"
-            exit 1
-          fi
-          if [ ! -f "themes/pierre-dark.json" ]; then
-            echo "❌ pierre-dark.json not generated"
-            exit 1
-          fi
+          for theme in \
+            pierre-light \
+            pierre-light-protanopia-deuteranopia \
+            pierre-light-soft \
+            pierre-light-tritanopia \
+            pierre-light-vibrant \
+            pierre-dark \
+            pierre-dark-protanopia-deuteranopia \
+            pierre-dark-soft \
+            pierre-dark-tritanopia \
+            pierre-dark-vibrant; do
+            if [ ! -f "themes/${theme}.json" ]; then
+              echo "❌ ${theme}.json not generated"
+              exit 1
+            fi
+          done
           echo "✅ All theme files generated successfully"
 
       - name: Verify ESM wrapper modules exist
         run: |
-          for theme in pierre-dark pierre-light pierre-dark-vibrant pierre-light-vibrant; do
+          for theme in \
+            pierre-light \
+            pierre-light-protanopia-deuteranopia \
+            pierre-light-soft \
+            pierre-light-tritanopia \
+            pierre-light-vibrant \
+            pierre-dark \
+            pierre-dark-protanopia-deuteranopia \
+            pierre-dark-soft \
+            pierre-dark-tritanopia \
+            pierre-dark-vibrant; do
             if [ ! -f "dist/${theme}.mjs" ]; then
               echo "❌ dist/${theme}.mjs not generated"
               exit 1
