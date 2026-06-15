@@ -3,14 +3,14 @@
   "tasks": [
     {
       "type": "npm",
-      "script": "start",
+      "script": "dev",
       "group": {
         "kind": "build",
         "isDefault": true
       },
       "problemMatcher": [],
-      "label": "npm: start",
-      "detail": "nodemon --watch src src/index.js"
+      "label": "npm: dev",
+      "detail": "nodemon --watch src --watch scripts --ext ts --exec \"npm run build && npm run preview\""
     },
     {
       "type": "npm",
@@ -18,7 +18,7 @@
       "group": "build",
       "problemMatcher": [],
       "label": "npm: build",
-      "detail": "node src/index.js"
+      "detail": "ts-node scripts/build.ts"
     }
   ]
 }
