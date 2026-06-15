@@ -1,6 +1,6 @@
 // src/previews/cvd.ts
 // Builds preview/cvd.html (returned as a string; written by scripts/createPreviews.ts) —
-// a human-eyeballing companion to the objective gate (test/cvd-test.ts). For each
+// a human-eyeballing companion to the objective gate (test/cvd.test.ts). For each
 // CVD (color-vision-deficiency) theme it shows,
 // side by side: the colors as defined in the theme, and the same colors pushed
 // through the Machado-2009 simulation for that deficiency — i.e. what a person
@@ -164,7 +164,7 @@ function renderCvdHtml(): string {
     <p>Left = the colors as defined in the theme. Right = the same colors pushed through
     the Machado-2009 simulation for that deficiency. If the design holds, the right column
     still reads as added-vs-deleted, pass-vs-fail, and error-vs-warning.
-    Objective ΔE/contrast checks live in <code>test/cvd-test.ts</code> (run via <code>npm test</code>).</p>
+    Objective ΔE/contrast checks live in <code>test/cvd.test.ts</code> (run via <code>npm test</code>).</p>
   </header>
   <main>
     ${VIEWS.map(section).join("\n")}

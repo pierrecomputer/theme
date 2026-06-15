@@ -76,7 +76,7 @@
   "scripts": {
     "build": "ts-node scripts/build.ts",
     "preview": "ts-node scripts/createPreviews.ts",
-    "test": "npm run build && ts-node test/test.ts",
+    "test": "npm run build && node --require ts-node/register --test --test-reporter spec test/*.test.ts",
     "dev": "nodemon --watch src --watch scripts --ext ts --exec \"npm run build && npm run preview\"",
     "package": "ts-node scripts/buildVsCodePackage.ts",
     "prepublishOnly": "npm run build"

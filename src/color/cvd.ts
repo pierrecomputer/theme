@@ -1,5 +1,5 @@
 // CVD (Color Vision Deficiency) simulation — "what does this color look like to a
-// protan/deutan/tritan viewer?". Consumed by the objective gate (test/cvd-test.ts)
+// protan/deutan/tritan viewer?". Consumed by the objective gate (test/cvd.test.ts)
 // and the proof-sheet preview (src/previews/cvd.ts).
 //
 // ─────────────────────────────────────────────────────────────────────────────
@@ -22,7 +22,7 @@
 // hue pole has to be reused. We don't guess whether a palette works — we
 // *simulate* how each color looks to a dichromat, then measure separations with
 // deltaE2000() and legibility with contrastRatio() (sibling color-science
-// modules). The objective gate in test/cvd-test.ts ties those together.
+// modules). The objective gate in test/cvd.test.ts ties those together.
 //
 // Standards / sources (also cited in ACCESSIBILITY.md):
 //   • Machado, Oliveira & Fernandes (2009), "A Physiologically-Based Model for
@@ -54,7 +54,7 @@ export type CVDType = "protan" | "deutan" | "tritan";
 // matches real dichromat perception better than the gamma-sRGB application used
 // by culori and the `colorspace` R package (which it follows). The two only
 // diverge noticeably on saturated colors. We implement linear here and the gate
-// in test/cvd-test.ts additionally checks culori's gamma convention for Tier-1
+// in test/cvd.test.ts additionally checks culori's gamma convention for Tier-1
 // and Tier-2 distinguishability.
 
 type Matrix3 = readonly [
@@ -151,7 +151,7 @@ export function simulateCVD(hex: string, type: CVDType, severity = 1.0): string 
 // Provable invariants of the model: severity-0 is the identity, neutral grays are
 // preserved (every Machado row sums to ~1), and the expected confusable axis
 // actually collapses. (contrast/ΔE are additionally cross-checked against culori
-// in test/cvd-test.ts.) These run from cvd-test.ts.
+// in test/cvd.test.ts.) These run from cvd.test.ts.
 
 export type SelfCheckResult = { name: string; ok: boolean; detail: string };
 
