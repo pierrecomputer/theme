@@ -40,3 +40,13 @@ Usage:
  Neovim:
   A port of this colorscheme is available for Neovim.
   Check out [pierre-theme.nvim](https://github.com/chaosteil/pierre-theme.nvim)
+
+ Omarchy:
+  Check out [omarchy-pierre-dark-theme](https://github.com/douglasdemoura/omarchy-pierre-dark-theme)
+  or install with omarchy theme install https://github.com/douglasdemoura/omarchy-pierre-dark-theme
+
+  Available themes:
+   - omarchy-pierre-dark-theme
+   - omarchy-pierre-dark-soft-theme
+   - omarchy-pierre-light-theme
+   - omarchy-pierre-light-soft-theme
